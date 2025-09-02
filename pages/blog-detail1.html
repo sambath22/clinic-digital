@@ -109,10 +109,10 @@
         <!-- Right Side (Buttons / Account) -->
         <div class="d-flex ms-3">
           <!-- BEFORE LOGIN -->
-          <a href="../pages/patient-signup.html" class="btn btn-custom btn-signin me-2">
+          <a href="pages/patient-signup.html" class="btn btn-custom btn-signin me-2">
             ចុះឈ្មោះ
           </a>
-          <a href="../pages/patient-login.html" class="btn btn-custom btn-register">
+          <a href="pages/patient-login.html" class="btn btn-custom btn-register">
             ចូលគណនី
           </a>
 
@@ -170,7 +170,15 @@
                 <a href="../pages/doctor.html" class="b-link">វេជ្ជបណ្ឌិត / </a>
                 <a href="#" class="b-link text-secondary">ព័ត៌មានលំអិត</a>
             </div>
-            <h1 class="title-blog mt-5">ផ្លូវចិត្ត និងជីវិតប្រចាំថ្ងៃ</h1>
+            <!-- <div class="detail-title d-flex justify-content-between"> -->
+              <h1 class="title-blog mt-5">ផ្លូវចិត្ត និងជីវិតប្រចាំថ្ងៃ</h1>
+              <!-- <div class="d-flex gap-2 mt-5">
+                <a href="#" class="social-btn bg-fb text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn bg-danger text-white"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-btn bg-linkin text-white"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-btn bg-ig text-white"><i class="fab fa-instagram"></i></a>
+              </div> -->
+            <!-- </div> -->
             <div class="row align-items-center">
         <div class="col-lg-6">
           <img src="../assets/img/blog/post_1.jpeg" class="img-fluid rounded shadow" alt="Lifestyle">
@@ -183,11 +191,6 @@
             សំខាន់ក្នុងការបង្កើតជីវិតមានន័យ។ មន្ទីរពេទ្យ និងអ្នកជំនាញផ្នែកសុខភាព ជួយរំលឹកយើងថា
             សុខភាពមិនមែនជាគោលដៅតែមួយទេ ប៉ុន្តែជាដំណើរដែលត្រូវអនុវត្តជារៀងរាល់ថ្ងៃ។ ដោយយល់ដឹង
             និងអនុវត្តជាបន្តបន្ទាប់ យើងអាចកសាងរបៀបរស់នៅដែលមានសុខភាពល្អ និងជីវិតដែលមានតម្លៃពិតប្រាកដ។</p>
-          <div class="btn-submit">
-                <button type="submit" class="btn text-white mt-2">
-                អានបន្ថែម<i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
         </div>
       </div>
     </div>
@@ -423,70 +426,49 @@
         <h2 class="mb-5">អត្ថបទពាក់ព័ន្ធ</h2>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <a href="blog-detail1.html" class="card-image">
-                        <img src="../assets/img/blog/post_1 (1).jpeg" alt="">
-                        <div class="link-icon"></div>
-                    </a>
+                  <div class="card" onclick="window.location='blog-detail1.html'" style="cursor:pointer;">
+                    <div class="card-image">
+                      <img src="../assets/img/blog/post_1 (1).jpeg" alt="">
+                    </div>
                     <div class="card-content">
                         <div class="date">ថ្ងៃទី 1 ខែឧសភា ឆ្នាំ 2024</div>
                         <h3 class="card-title">អត្ថប្រយោជន៍នៃសមាធិចិត្តសម្រាប់ភាពតានតឹង និងការថប់បារម្ភ</h3>
-                        <div class="d-flex gap-2 mb-3">
-                            <a href="#" class="social-btn bg-fb text-white"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-btn bg-danger text-white"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="social-btn bg-linkin text-white"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-btn bg-ig text-white"><i class="fab fa-instagram"></i></a>
-                        </div>
                         <div class="btn-submit">
-                            <button type="submit" class="btn text-white mt-2">
-                                Submit <i class="fa-solid fa-arrow-right"></i>
-                            </button>
+                          <button type="button" class="btn text-white mt-2" onclick="window.location='blog-detail1.html'">
+                            អានបន្ថែម <i class="fa-solid fa-arrow-right"></i>
+                          </button>
                         </div>
                     </div>
                 </div>
             </div>
              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <a href="blog-detail1.html" class="card-image">
-                        <img src="../assets/img/blog/post_2 (1).jpeg" alt="">
-                        <div class="link-icon"></div>
-                    </a>
+                  <div class="card" onclick="window.location='blog-detail1.html'" style="cursor:pointer;">
+                    <div class="card-image">
+                      <img src="../assets/img/blog/post_2 (1).jpeg" alt="">
+                    </div>
                     <div class="card-content">
                         <div class="date">ថ្ងៃទី 28 ខែកុម្ភៈ ឆ្នាំ 2025</div>
                         <h3 class="card-title">ស្វែងយល់ពីរោគសញ្ញាអស់កម្លាំងរ៉ាំរ៉ៃ៖ រោគសញ្ញា មូលហេតុ និងការព្យាបាល</h3>
-                        <div class="d-flex gap-2 mb-3">
-                            <a href="#" class="social-btn bg-fb text-white"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-btn bg-danger text-white"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="social-btn bg-linkin text-white"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-btn bg-ig text-white"><i class="fab fa-instagram"></i></a>
-                        </div>
                         <div class="btn-submit">
-                            <button type="submit" class="btn text-white mt-2">
-                                Submit <i class="fa-solid fa-arrow-right"></i>
-                            </button>
+                          <button type="button" class="btn text-white mt-2" onclick="window.location='blog-detail1.html'">
+                            អានបន្ថែម <i class="fa-solid fa-arrow-right"></i>
+                          </button>
                         </div>
                     </div>
                 </div>
             </div>
              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <a href="blog-detail1.html" class="card-image">
-                        <img src="../assets/img/blog/blog_4.jpeg" alt="">
-                        <div class="link-icon"></div>
-                    </a>
+                  <div class="card" onclick="window.location='blog-detail1.html'" style="cursor:pointer;">
+                    <div class="card-image">
+                      <img src="../assets/img/blog/post_4.jpeg" alt="">
+                    </div>
                     <div class="card-content">
                         <div class="date">ថ្ងៃទី ២៤ ខែសីហា ឆ្នាំ 2025</div>
                         <h3 class="card-title">ការគ្រប់គ្រងការឈឺចាប់រ៉ាំរ៉ៃ៖ គន្លឹះ និងយុទ្ធសាស្ត្រសម្រាប់គុណភាពជីវិតកាន់តែប្រសើរ</h3>
-                        <div class="d-flex gap-2 mb-3">
-                            <a href="#" class="social-btn bg-fb text-white"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-btn bg-danger text-white"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="social-btn bg-linkin text-white"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-btn bg-ig text-white"><i class="fab fa-instagram"></i></a>
-                        </div>
                         <div class="btn-submit">
-                            <button type="submit" class="btn text-white mt-2">
-                                Submit <i class="fa-solid fa-arrow-right"></i>
-                            </button>
+                          <button type="button" class="btn text-white mt-2" onclick="window.location='blog-detail1.html'">
+                            អានបន្ថែម <i class="fa-solid fa-arrow-right"></i>
+                          </button>
                         </div>
                     </div>
                 </div>
@@ -507,7 +489,7 @@
             </p>
             <div class="btn-submit">
               <button type="submit" class="btn text-white mt-3">
-                <a href="pages/contact_us.html" class="quick-contact">ទំនាក់ទំនងមកយេីងឥឡូវនេះ<i
+                <a href="contact_us.html" class="quick-contact">ទំនាក់ទំនងមកយេីងឥឡូវនេះ<i
                     class="fa-solid fa-arrow-right"></i></a>
               </button>
             </div>
@@ -523,17 +505,6 @@
       <!-- Links Section -->
       <section class="link-footer">
         <div class="container py-5">
-          <!-- Brand -->
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <img src="../assets/img/logo1.png" alt="" width="160" class="mb-3" />
-              <p class="text-white-50 mx-auto" style="max-width: 500px">
-                សុខភាពរបស់អ្នក ជាមួយបច្ចេកវិទ្យារបស់យើង មិនត្រឹមតែបើកទ្វារទៅកាន់សក្តានុពលគ្មានកំណត់ទេ
-                ប៉ុន្តែធ្វើឲ្យការថែទាំកាន់តែទំនើប សុវត្ថិភាព និងងាយស្រួលជាងមុន។
-              </p>
-            </div>
-          </div>
-
           <div class="row no-wrap">
             <!-- Social -->
             <div class="col-lg-3 col-md-6 mb-4">
@@ -555,19 +526,19 @@
               <h5 class="fw-bold mb-3">តំណភ្ជាប់រហ័ស</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="pages/aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
+                  <a href="aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
                 </li>
                 <li>
-                  <a href="pages/department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
+                  <a href="department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
                 </li>
                 <li>
-                  <a href="pages/doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
+                  <a href="doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
                 </li>
                 <li>
-                  <a href="pages/timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
+                  <a href="timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
                 </li>
                 <li>
-                  <a href="pages/appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
+                  <a href="appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
                 </li>
               </ul>
             </div>
