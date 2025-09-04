@@ -1515,6 +1515,9 @@ img {
   font-size: 25px;
   font-weight: 500;
 }
+.main-blog .blog-link .text-blog{
+  color: #6262c0;
+}
 .main-blog .title-blog {
   color: var(--secondary);
   font-size: 35px;
@@ -1753,7 +1756,7 @@ img {
   margin-top: -100px;
   border-radius: 50px 50px 0 0;
   z-index: 3;
-  background: linear-gradient(135deg, #91a8c3 0%, #ece3e3 100%);
+  background: linear-gradient(135deg, #b1cef062 0%, #ece3e370 100%);
   box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.1);
 }
 
