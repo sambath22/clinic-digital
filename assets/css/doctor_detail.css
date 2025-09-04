@@ -354,7 +354,9 @@ textarea {
   top: 64%;
   transform: translateY(-50%);
 }
-
+.experience .medium{
+  margin-top: -20px;
+}
 .fa-regular {
   color: #0ea6df;
 }
@@ -399,8 +401,8 @@ textarea {
 }
 
 .appointment .card .appointment-image {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 98%;
   display: block;
 }
 
