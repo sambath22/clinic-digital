@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ទូទាត់ការកក់ - ABA Pay</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f8fafc;
+        font-family: "Khmer OS Battambang", sans-serif;
+      }
+      .step-indicator {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      .step {
+        flex: 1;
+        text-align: center;
+        position: relative;
+      }
+      .step::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: -50%;
+        width: 100%;
+        height: 3px;
+        background: #dee2e6;
+        z-index: -1;
+      }
+      .step:last-child::after {
+        display: none;
+      }
+      .step .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #dee2e6;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #6c757d;
+        margin-bottom: 8px;
+      }
+      .step.active .circle {
+        background: #4a6fa5;
+        color: white;
+      }
+      .step p {
+        font-size: 14px;
+        margin: 0;
+        color: #495057;
+      }
+      .pricing-details {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      .qr-box {
+        background: white;
+        padding: 20px;
+        border: 2px dashed #4a6fa5;
+        border-radius: 12px;
+        display: inline-block;
+      }
+      .btn-pay {
+        color: white;
+        background: #4a6fa5;
+        border: none;
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .btn-pay:hover {
+        background: #242755;
+        transform: translateY(-2px);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <!-- Title -->
+      <h2 class="text-center mb-4 fw-bold">ទូទាត់ការកក់</h2>
+
+      <!-- Steps -->
+      <div class="step-indicator">
+        <div class="step">
+          <div class="circle">1</div>
+          <p>ការកក់</p>
+        </div>
+        <div class="step active">
+          <div class="circle">2</div>
+          <p>ទូទាត់</p>
+        </div>
+        <div class="step">
+          <div class="circle">3</div>
+          <p>បញ្ជាក់</p>
+        </div>
+      </div>
+
+      <!-- Payment Card -->
+      <div
+        class="card shadow-lg p-4 mx-auto"
+        style="max-width: 600px; border-radius: 20px"
+      >
+        <h5 class="mb-3">📋 សេចក្ដីលម្អិតនៃការកក់</h5>
+        <div class="pricing-details mb-4">
+          <p><strong>ឈ្មោះ:</strong> Sambath</p>
+          <p><strong>កញ្ចប់:</strong> ផែនការសុខភាពមាត់ធ្មេញ</p>
+          <p><strong>កាលបរិច្ឆេទ:</strong> 2025-09-10</p>
+          <p>
+            <strong>តម្លៃ:</strong>
+            <span class="text-success fw-bold">$79</span>
+          </p>
+        </div>
+
+        <h5 class="mb-3 text-center">សូមស្គែន QR ដើម្បីទូទាត់ជាមួយ ABA</h5>
+        <div class="text-center mb-4">
+          <div class="qr-box">
+            <img
+              src="../assets/img/aba-qr.png"
+              alt="ABA Pay QR"
+              class="img-fluid"
+              style="max-width: 200px"
+            />
+          </div>
+          <p class="mt-3 text-muted">ស្គែនជាមួយ ABA Mobile App</p>
+        </div>
+
+        <form
+          action="../pages/confirmation.html"
+          method="POST"
+          class="text-center"
+        >
+          <button type="submit" class="btn btn-pay w-100">
+            ✅ ខ្ញុំបានបង់រួចហើយ
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
