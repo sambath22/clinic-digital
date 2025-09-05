@@ -11,7 +11,10 @@
   <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
+      
     />  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- ---------font-awesome---------- -->
@@ -26,29 +29,32 @@
 
 <body>
 <!-- ======= HEADER ======= -->
+ 
 <header class="fixed-top">
   <div class="container">
-    <nav class="navbar navbar-expand-lg rounded-3" >
+    <nav class="navbar navbar navbar-expand-xl">
       <div class="container-fluid">
 
-        <!-- Logo (Left) -->
+        <!-- Logo -->
         <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="index.html">
           <img src="../assets/img/logo1.png" alt="Clinic Digital Logo" height="40" class="me-2">
         </a>
 
-        <!-- Mobile Toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar Menu (CENTER) -->
-        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-          <ul class="navbar-nav fw-bold text-uppercase">
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+          <!-- Center Nav links -->
+          <ul class="navbar-nav fw-bold text-uppercase mx-auto">
             <li class="nav-item px-2">
-              <a class="nav-link active text-white" href="../pages/index2.html">ទំព័រដើម</a>
+              <a class="nav-link active text-white" href="../pages/homepage.html">ទំព័រដើម</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/aboutUs.html">អំពីយើង</a>
+              <a class="nav-link text-white" href="../pages/aboutUs.html">អំពីពួកយើង</a>
             </li>
             <li class="nav-item px-2">
               <a class="nav-link text-white" href="../pages/appointment.html">ការណាត់ជួប</a>
@@ -56,20 +62,18 @@
 
             <!-- Services Dropdown -->
             <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
-                សេវាកម្ម
-              </a>
+              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button"
+                data-bs-toggle="dropdown">សេវាកម្ម</a>
               <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
                 <li><a class="dropdown-item text-white" href="../pages/department_page.html">សេវាកម្មទាំងអស់</a></li>
-                <li><a class="dropdown-item text-white" href="../pages/department-detail.html">សេវាកម្មលំអិត</a></li>
+                <li><a class="dropdown-item text-white" href="../pages/emergency.html">សេវាកម្មលំអិត</a></li>
               </ul>
             </li>
 
             <!-- Pages Dropdown -->
             <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">
-               ទំព័រផ្សេងៗ
-              </a>
+              <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button"
+                data-bs-toggle="dropdown">ទំព័រផ្សេងៗ</a>
               <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
                 <li><a class="dropdown-item text-white" href="blog.html">ពត៌មានថ្មីៗ</a></li>
                 <li><a class="dropdown-item text-white" href="timetable.html">ពេលវេលា</a></li>
@@ -86,68 +90,68 @@
               <a class="nav-link text-white" href="../pages/contact_us.html">ទាក់ទងមកពួកយើង</a>
             </li>
           </ul>
-        </div>
 
-       <!-- Right Side (Icons + Profile Dropdown) -->
-<div class="d-flex ms-3 align-items-center">
-  <!-- Messages -->
-  <div class="dropdown me-3">
-    <a class="text-white position-relative" href="#" id="messagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-envelope-fill fs-5"></i>
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-        3
-        <span class="visually-hidden">unread messages</span>
-      </span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end rounded-3" style="min-width: 250px; background-color: #1e3a8a;">
-      <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
-      <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
-      <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
-    </ul>
-  </div>
+          <!-- Right Side (Messages + Notifications + Profile) -->
+          <div class="d-flex align-items-center">
+            <!-- Messages -->
+            <div class="dropdown me-3">
+              <a class="text-white position-relative" href="#" id="messagesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-envelope-fill fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end rounded-3"
+                style="min-width: 250px; background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
+                <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
+                <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
+              </ul>
+            </div>
 
-<!-- Notification Link -->
-<div class="me-3">
-  <a class="text-white position-relative" href="../pages/notification.html" id="notificationsLink">
-    <i class="bi bi-bell-fill fs-5"></i>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-      3
-      <span class="visually-hidden">unread notifications</span>
-    </span>
-  </a>
-</div>
+            <!-- Notifications -->
+            <div class="dropdown me-3">
+              <a class="text-white position-relative" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-bell-fill fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end rounded-3"
+                style="min-width: 250px; background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="#">Notification 1</a></li>
+                <li><a class="dropdown-item text-white" href="#">Notification 2</a></li>
+                <li><a class="dropdown-item text-white" href="#">Notification 3</a></li>
+              </ul>
+            </div>
 
-
-  <!-- Profile Dropdown -->
-  <div class="dropdown">
-    <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="../assets/img/user.png" alt="user" width="32" height="32" class="rounded-circle me-2">
-      សំបាត់
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
-      <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
-      <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
-      <li><hr class="dropdown-divider bg-white"></li>
-      <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
-    </ul>
-  </div>
-</div>
-
+            <!-- Profile -->
+            <div class="dropdown">
+              <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#"
+                id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../assets/img/user.png" alt="user" width="32" height="32" class="rounded-circle me-2">
+                សំបាត់
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
+                <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
+                <li><hr class="dropdown-divider bg-white"></li>
+                <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- End collapse -->
       </div>
     </nav>
   </div>
-
 </header>
 
 
-<!-- ======= END HEADER ======= -->
 
-<!-- ======= END HEADER ======= -->
+
 
 
   <!-- ==============HEADER[END]=================== -->
 
-  <main>
+<main>
     <!-- ================Hero-banner[START]===================== -->
     <section id="hero" class="hero d-flex flex-column mb-0 pb-0 shadow" 
          style="position: relative; background: url('../assets/img/hero_bg.jpeg') no-repeat center center; 
@@ -156,227 +160,244 @@
   <!-- Overlay -->
   <div style="position: absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.4); z-index:1;"></div>
 
-  <div class="container d-flex align-items-center" style="position: relative; z-index:2;">
-    <div class="row m-0 align-items-center w-100">
-      <!-- Left text -->
-      <div class="hero-tex col-xl-6 col-lg-6 col-md-12 col-12 text-white">
-        <h1 class="mb-5">
-          ការថែទាំប្រកបដោយមេត្តា <br />
-          លទ្ធផលពិសេស
-        </h1>
-        <div class="mb-3">
-          <a href="#" class="btn fw-bold hero-btn">ជំនួយសុខភាព</a>
+      <div class="container d-flex align-items-center" style="position: relative; z-index:2;">
+        <div class="row m-0 align-items-center w-100">
+          <!-- Left text -->
+          <div class="hero-tex col-xl-6 col-lg-6 col-md-12 col-12 text-white">
+            <h1 class="mb-5">
+              ការថែទាំប្រកបដោយផាសុខភាព<br />
+              ទទួលបានការយកចិត្តទុកដាក់
+            </h1>
+            <div class="mb-3">
+              <a href="../pages/appointment.html" class="btn fw-bold hero-btn">កក់ការណាត់ជួប</a>
+            </div>
+            <p>
+              ក្រុមវេជ្ជបណ្ឌិតដែលមានបទពិសោធន៍
+              និងអ្នកជំនាញផ្នែកថែទាំសុខភាពរបស់យើងប្តេជ្ញាផ្តល់ការថែទាំប្រកបដោយគុណភាព
+              និងការយកចិត្តទុកដាក់ផ្ទាល់ខ្លួនដល់អ្នកជំងឺរបស់យើង។
+            </p>
+          </div>
+
+          <!-- Right image -->
+          <div class="col-xl-6 col-lg-6 col-md-12 text-center me-5">
+            <img src="../assets/img/patents.png" alt="Doctor and Family" class="cs_hero_patents" />
+          </div>
         </div>
-        <p>
-          ក្រុមវេជ្ជបណ្ឌិតដែលមានបទពិសោធន៍
-          និងអ្នកជំនាញផ្នែកថែទាំសុខភាពរបស់យើងប្តេជ្ញាផ្តល់ការថែទាំប្រកបដោយគុណភាព
-          និងការយកចិត្តទុកដាក់ផ្ទាល់ខ្លួនដល់អ្នកជំងឺរបស់យើង។
-        </p>
+      </div>
+    </section>
+    <!-- ================Hero-banner[END]===================== -->
+
+    <!-- About US -->
+    <section class="aboutus cs_shape_wrap mb-5" id="about">
+  <div class="cs_shape_3">
+    <svg width="738" height="1021" viewBox="0 0 738 1021" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.3"
+        d="M506.527 867.937C615.393 1097.48 818.459 1018.63 907.122 949.788C1042.42 829.481 1036.04 611.775 1029.54 527.791C1024.34 460.604 1062.82 284.256 1082.7 204.481C1083.75 -64.008 818.226 5.58123 770.748 15.9811C723.269 26.3809 576.724 101.716 421.771 86.8061C297.808 74.8779 186.268 99.512 145.993 113.32C-23.6388 193.807 -2.65999 291.251 7.10276 333.378C16.8655 375.504 69.7486 450.893 258.934 518.436C410.283 572.47 487.55 773.465 506.527 867.937Z"
+        fill="url(#paint0_linear_6_231)"></path>
+      <defs>
+        <linearGradient id="paint0_linear_6_231" x1="916.904" y1="949.82" x2="393.707" y2="-20.953"
+          gradientUnits="userSpaceOnUse">
+          <stop stop-color="#86BBF1" offset="0"></stop>
+          <stop offset="1" stop-color="#D2EAEF"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="cs_height_190 cs_height_xl_150 cs_height_lg_105"></div>
+
+  <div class="container">
+    <div class="experience row text-center align-items-center">
+      <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3 mb-md-0">
+        <h2 class="mt-2">20+</h2>
+        <p class="mb-0">ឆ្នាំនៃបទពិសោធន៍</p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-md-0">
+        <h2 class="mt-2">95%</h2>
+        <p class="mb-0">អត្រាពេញចិត្តរបស់អ្នកជំងឺ</p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-md-0">
+        <h2 class="mt-2">5000+</h2>
+        <p class="mb-0">អ្នកជំងឺដែលបានបម្រើប្រចាំឆ្នាំ</p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-md-0">
+        <h2 class="mt-2">10+</h2>
+        <p class="mb-0">អ្នកផ្តល់សេវាសុខាភិបាលក្នុងក្រុម</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center mt-5 gap_y_50">
+      <div class="col-lg-6">
+        <div class="about-image">
+          <img src="../assets/img/about-us/about.png" alt="អំពីយើង" />
+          <div class="about_mini_img">
+            <img src="../assets/img/about-us/about_mini.svg" alt="Mini" class="rotate_animation" />
+            <img src="../assets/img/about-us/tick.svg" alt="ត្រង់" class="right_icon" />
+          </div>
+        </div>
       </div>
 
-      <!-- Right image -->
-      <div class="col-xl-6 col-lg-6 col-md-12 text-center me-5">
-        <img src="../assets/img/patents.png" alt="Doctor and Family" class="cs_hero_patents" />
+      <div class="col-lg-6">
+        <div class="about_content">
+          <h3 class="subtitle text-uppercase">អំពីពួកយើង</h3>
+          <h2 class="title">
+            DigiTal Clinic គឺជាក្រុមគ្រូពេទ្យដែលមានបទពិសោធន៍ខ្ពស់
+          </h2>
+          <p class="mb-0">
+            យើងបានឧទ្ទិសដល់ការផ្តល់សេវាថែទាំសុខភាពដែលមានគុណភាពខ្ពស់។ យើងជឿជាក់លើវិធីសាស្ត្ររួមចំពោះការថែទាំសុខភាព ដែលផ្តោតលើការព្យាបាលទាំងមូល មិនត្រឹមតែជាជំងឺ ឬរោគសញ្ញាប៉ុណ្ណោះទេ។
+          </p>
+        </div>
       </div>
     </div>
   </div>
     </section>
 
-    <!-- ================Hero-banner[END]===================== -->
-
-    <!-- About US -->
-    <section class="aboutus cs_shape_wrap mb-5" id="about">
-      <div class="cs_shape_3">
-        <svg width="738" height="1021" viewBox="0 0 738 1021" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path opacity="0.3"
-            d="M506.527 867.937C615.393 1097.48 818.459 1018.63 907.122 949.788C1042.42 829.481 1036.04 611.775 1029.54 527.791C1024.34 460.604 1062.82 284.256 1082.7 204.481C1083.75 -64.008 818.226 5.58123 770.748 15.9811C723.269 26.3809 576.724 101.716 421.771 86.8061C297.808 74.8779 186.268 99.512 145.993 113.32C-23.6388 193.807 -2.65999 291.251 7.10276 333.378C16.8655 375.504 69.7486 450.893 258.934 518.436C410.283 572.47 487.55 773.465 506.527 867.937Z"
-            fill="url(#paint0_linear_6_231)"></path>
-          <defs>
-            <linearGradient id="paint0_linear_6_231" x1="916.904" y1="949.82" x2="393.707" y2="-20.953"
-              gradientUnits="userSpaceOnUse">
-              <stop stop-color="#86BBF1" offset="0"></stop>
-              <stop offset="1" stop-color="#D2EAEF"></stop>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div class="cs_height_190 cs_height_xl_150 cs_height_lg_105"></div>
-      <div class="container">
-        <div class="experience row text-center align-items-center">
-          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3 mb-md-0">
-            <h2 class="mt-2">20+</h2>
-            <p class="mb-0">Year Of Experience</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-md-0">
-            <h2 class="mt-2">95%</h2>
-            <p class="mb-0">Patient satisfaction rating</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-md-0">
-            <h2 class="mt-2">5000+</h2>
-            <p class="mb-0">Patients served annually</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-md-0">
-            <h2 class="mt-2">10+</h2>
-            <p class="mb-0">Healthcare providers on staff</p>
-          </div>
-        </div>
-
-        <div class="row align-items-center mt-5 gap_y_50">
-          <div class="col-lg-6">
-            <div class="about-image">
-              <img src="../assets/img/about-us/about.png" alt="About" />
-              <div class="about_mini_img">
-                <img src="../assets/img/about-us/about_mini.svg" alt="Mini" class="rotate_animation" />
-                <img src="../assets/img/about-us/tick.svg" alt="Right" class="right_icon" />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="about_content">
-              <h3 class="subtitle text-uppercase">អំពីពួកយើង</h3>
-              <h2 class="title">
-                DigiTal Clinic គឺជាក្រុមគ្រូពេទ្យដែលមានបទពិសោធន៍
-              </h2>
-              <p class="mb-0">
-                ឧទ្ទិសដល់ការផ្តល់សេវាថែទាំសុខភាពគុណភាពខ្ពស់។ យើងជឿជាក់លើ ក
-                វិធីសាស្រ្តរួមចំពោះការថែទាំសុខភាពដែលផ្តោតលើការព្យាបាលទាំងមូល
-                មនុស្ស​មិន​ត្រឹម​តែ​ជា​ជំងឺ​ឬ​រោគ​សញ្ញា​នោះ​ទេ
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- ===============ABOUT[END]================ -->
     <!-- ==============TESTIMONIAL[START]=================== -->
 
-    <section class="testimonial cs_bg_filed align-items-cente py-5  ">
-      <div class="container align-items-center">
-        <span>មតិយោបល់</span>
-        <h2>អ្វីដែលអ្នកជំងឺបាននិយាយ</h2>
+    <section class="testimonial-section">
+      <div class="container">
+        <h2>អ្វីដែល <span>អតិថិជន</span> និយាយ</h2>
+        <p class="subtitle">សូមស្តាប់ពីអតិថិជនដែលពេញចិត្តនិងការប្រើប្រាស់ Platform របស់យើង</p>
+
         <!-- Swiper -->
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <img src="../assets/img/testimonial_img_1.png" alt="profile" />
-                <div class="testimonial-name">Laurence Vendetta</div>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">
-                  ថ្មីៗនេះខ្ញុំត្រូវនាំកូនរបស់ខ្ញុំទៅ ProHealth សម្រាប់អនីតិជន
-                  របួស ហើយខ្ញុំចាប់អារម្មណ៍យ៉ាងខ្លាំងចំពោះការថែទាំ។ នេះ។
-                  គ្រូពេទ្យកុមារគឺអស្ចារ្យជាមួយគាត់
-                  ហើយធ្វើឱ្យគាត់មានអារម្មណ៍ស្រួល។ បុគ្គលិកមានចិត្តល្អ
-                  និងយកចិត្តទុកដាក់។
-                </p>
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                Clinic Digital បានបន្ថែមប្រសិទ្ធភាពក្នុងការគ្រប់គ្រងក្លិនិករបស់យើង។
+                អ្នកជំងឺមានភាពពេញចិត្ត និងក្រុមការងារចូលចិត្តប្រើប្រាស់យ៉ាងខ្លាំង។
+              </p>
+              <div class="testimonial-footer">
+                <img src="../assets/img/testimonial_img.jpg" alt="ចន ដូ" />
+                <div>
+                  <h4>ចន ដូ</h4>
+                  <p>ប្រធានផ្នែកគ្រប់គ្រង Clinic at HealthFirst</p>
+                </div>
               </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <img src="../assets/img/testimonial_img_2.png" alt="profile" />
-                <div class="testimonial-name">Paulo Hubert</div>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">
-                  បទពិសោធន៍ដ៏អស្ចារ្យនៅគ្លីនិក! គ្រូពេទ្យគឺ ប្រកបដោយវិជ្ជាជីវៈ
-                  និងរួសរាយរាក់ទាក់ ហើយពួកគេបានធ្វើឱ្យខ្ញុំមានអារម្មណ៍ស្រួល
-                  ពីដើមដល់ចប់។ ផ្តល់អនុសាសន៍ខ្ពស់សម្រាប់គ្រួសារ
-                  ការថែទាំសុខភាព។បុគ្គលិកមានចិត្តល្អ
-                  និងយកចិត្តទុកដាក់។
-                </p>
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                Platform របស់ Clinic Digital មាន UI សាមញ្ញ និងងាយស្រួលប្រើ។
+                វាបន្ថែមការចូលរួម និងកាត់បន្ថយពេលវេលាការងាររបស់យើង។
+              </p>
+              <div class="testimonial-footer">
+                <img src="../assets/img/testimonial_img_1.png" alt="អេលីយ៉ា រ៉ាមីរ៉េស" />
+                <div>
+                  <h4>អេលីយ៉ា រ៉ាមីរ៉េស</h4>
+                  <p>នាយកប្រតិបត្តិ at EcoHealth Clinic</p>
+                </div>
               </div>
             </div>
 
             <!-- Slide 3 -->
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <img src="../assets/img/testimonial_img.jpg" alt="profile" />
-                <div class="testimonial-name">Sophia James</div>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">
-                  សេវាកម្មនៅទីនេះគឺអស្ចារ្យណាស់។ ពួកគេពិតជាយកចិត្តទុកដាក់
-                  សុខុមាលភាពរបស់អ្នកជំងឺ។ ការ​ពិគ្រោះ​យោបល់​ឌីជីថល​បាន​រលូន
-                  និងងាយស្រួលចូលប្រើ។បុគ្គលិកមានចិត្តល្អ
-                  និងយកចិត្តទុកដាក់។ផ្តល់អនុសាសន៍ខ្ពស់សម្រាប់គ្រួសារ
-                  ការថែទាំសុខភាព។
-                </p>
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                Clinic Digital បានផ្តល់បទពិសោធន៍ថ្មីក្នុងការតាមដានពិន្ទុសុខភាព និងការណាត់ជួប។
+                វាបង្កើនប្រសិទ្ធភាពនៃសេវាកម្មយើងយ៉ាងច្រើន។
+              </p>
+              <div class="testimonial-footer">
+                <img src="../assets/img/testimonial_img_2.png" alt="មៀ សុង" />
+                <div>
+                  <h4>មៀ សុង</h4>
+                  <p>CTO at HealthBridgeTech</p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Custom Nav Buttons -->
-          <div class="swiper-nav">
-            <div class="custom-swiper-btn swiper-button-prev">←</div>
-            <div class="custom-swiper-btn swiper-button-next">→</div>
-          </div>
+        <!-- Custom Buttons -->
+        <div class="testimonial-buttons">
+          <button class="btn-prev">&#10094;</button>
+          <button class="btn-next">&#10095;</button>
         </div>
       </div>
     </section>
+
     <!-- ============ TESTIMONIAL[END]============= -->
     <!-- ===========DOCTOR-SECTION[START]========= -->
-    <section class="doctor bg-light py-4 m-0" >
-      <div class="container">
+    <section class="doctor py-5 bg-light">
+      <div class="container text-center">
         <span>ព័ត៌មាន</span>
-        <h2 class="title py-2">វេជ្ជបណ្ឌិត</h2>
+        <h2>វេជ្ជបណ្ឌិត</h2>
         <div class="row g-4">
-          <!-- Doctor Card -->
+          <!-- Doctor 1 -->
+   
           <div class="col-lg-4 col-md-6">
-            <div class="card doctor-card shadow-sm border-0 h-100">
+             <div class="card doctor-card shadow-sm border-0 h-100">
               <div class="doctor-img-wrapper position-relative">
-                <img src="../assets/img/doctor/doctor_1.png" class="card-img-top" alt="Dr. James Lee" />
-                <div class="doctor-social d-flex justify-content-center align-items-center">
+                <a href=""></a>
+                <img src="../assets/img/doctor/doctor_1.png" alt="Dr. James Lee" />
+                <div
+                  class="doctor-social d-flex justify-content-center align-items-center"
+                >
                   <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                   <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
               </div>
               <div class="card-body text-center">
-                <h5 class="card-title mb-2">
-                  <a href="doctor-details.html">វេជ្ជបណ្ឌិត James Lee, MD</a>
+                <h5 class="card-title">
+                  <a href="../pages/doctor_detail.html">វេជ្ជបណ្ឌិត James Lee, MD</a>
                 </h5>
-                <p class="text-primary mb-2">ប្រធានគ្រូពេទ្យបេះដូង</p>
+                <p>ប្រធានគ្រូពេទ្យបេះដូង</p>
               </div>
             </div>
           </div>
 
-          <!-- Repeat for other doctors -->
+          <!-- Doctor 2 -->
           <div class="col-lg-4 col-md-6">
             <div class="card doctor-card shadow-sm border-0 h-100">
               <div class="doctor-img-wrapper position-relative">
-                <img src="../assets/img/doctor/doctor_2.png" class="card-img-top" alt="Dr. Anna Smith" />
-                <div class="doctor-social d-flex justify-content-center align-items-center">
+                <img
+                  src="../assets/img/doctor/doctor_2.png"
+                  alt="Dr. Anna Smith"
+                />
+                <div
+                  class="doctor-social d-flex justify-content-center align-items-center"
+                >
                   <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                   <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
               </div>
               <div class="card-body text-center">
-                <h5 class="card-title mb-2">
-                  <a href="doctor-details.html">វេជ្ជបណ្ឌិត Anna Smith, MD</a>
+                <h5 class="card-title">
+                  <a href="../pages/doctor_detail.html">វេជ្ជបណ្ឌិត Anna Smith, MD</a>
                 </h5>
-                <p class="text-primary mb-2">ប្រធានផ្នែកសរសៃប្រសាទ</p>
+                <p>ប្រធានផ្នែកសរសៃប្រសាទ</p>
               </div>
             </div>
           </div>
 
+          <!-- Doctor 3 -->
           <div class="col-lg-4 col-md-6">
             <div class="card doctor-card shadow-sm border-0 h-100">
               <div class="doctor-img-wrapper position-relative">
-                <img src="../assets/img/doctor/doctor_3.png" class="card-img-top" alt="Dr. Robert Kim" />
-                <div class="doctor-social d-flex justify-content-center align-items-center">
+                <img
+                  src="../assets/img/doctor/doctor_3.png"
+                  alt="Dr. Robert Kim"
+                />
+                <div
+                  class="doctor-social d-flex justify-content-center align-items-center"
+                >
                   <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
               </div>
               <div class="card-body text-center">
-                <h5 class="card-title mb-2">
-                  <a href="doctor-details.html">
-                    វេជ្ជបណ្ឌិត Robert Kim, MD</a>
+                <h5 class="card-title">
+                  <a href="../pages/doctor_detail.html">វេជ្ជបណ្ឌិត Robert Kim, MD</a>
                 </h5>
-                <p class="text-primary mb-2">ប្រធានពេទ្យកុមារ</p>
+                <p>ប្រធានពេទ្យកុមារ</p>
               </div>
             </div>
           </div>
@@ -388,65 +409,72 @@
     <!-- ===============DEPARTMENT [START]================ -->
 
     <section class="departments py-5" id="department">
-      <div class="container">
-        <h2 class="text-center mb-5 fw-bold title">ឯកទេសព្យាបាល</h2>
-        <div class="row g-4 justify-content-center">
-          <!-- Department 1 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <div class="department-card text-center">
-              <img src="../assets/img/department1.svg" alt="សង្គ្រោះបន្ទាន់" class="img-fluid" />
-              <h5>សង្គ្រោះបន្ទាន់</h5>
-            </div>
-          </div>
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold title">ឯកទេសព្យាបាល</h2>
+    <div class="row g-4 justify-content-center">
 
-          <!-- Department 2 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
-            <div class="department-card text-center">
-              <img src="../assets/img/department2.svg" alt="ព្យាបាលកុមារ" class="img-fluid" />
-              <h5>ព្យាបាលកុមារ</h5>
-            </div>
+      <!-- Department 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+        <a href="../pages/department-detail.html" class="text-decoration-none">
+          <div class="department-card text-center">
+            <img src="../assets/img/department1.svg" alt="សង្គ្រោះបន្ទាន់" class="img-fluid" />
+            <h5>សង្គ្រោះបន្ទាន់</h5>
           </div>
-
-          <!-- Department 3 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
-            <div class="department-card text-center">
-              <img src="../assets/img/departmet3.svg" alt="រោគស្ត្រី" class="img-fluid" />
-              <h5>រោគស្ត្រី</h5>
-            </div>
-          </div>
-
-          <!-- Department 4 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="400">
-            <div class="department-card text-center">
-              <img src="../assets/img/department4.svg" alt="ព្យាបាលបេះដូង" class="img-fluid" />
-              <h5>ព្យាបាលបេះដូង</h5>
-            </div>
-          </div>
-
-          <!-- Department 5 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="500">
-            <div class="department-card text-center">
-              <img src="../assets/img/department5.svg" alt="សរសៃប្រសាទ" class="img-fluid" />
-              <h5>សរសៃប្រសាទ</h5>
-            </div>
-          </div>
-
-          <!-- Department 6 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="600">
-            <div class="department-card text-center">
-              <img src="../assets/img/department6.svg" alt="ចិត្តសាស្ត្រ" class="img-fluid" />
-              <h5>ចិត្តសាស្ត្រ</h5>
-            </div>
-          </div>
-        </div>
+        </a>
       </div>
+
+      <!-- Department 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <a href="../pages/department-detail.html" class="text-decoration-none">
+          <div class="department-card text-center">
+            <img src="../assets/img/department2.svg" alt="ព្យាបាលកុមារ" class="img-fluid" />
+            <h5>ព្យាបាលកុមារ</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Department 3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+        <a href="../pages/department-detail.html" class="text-decoration-none">
+          <div class="department-card text-center">
+            <img src="../assets/img/departmet3.svg" alt="រោគស្ត្រី" class="img-fluid" />
+            <h5>រោគស្ត្រី</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Department 4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+        <a href="../pages/department-detail.html" class="text-decoration-none">
+          <div class="department-card text-center">
+            <img src="../assets/img/department4.svg" alt="ព្យាបាលបេះដូង" class="img-fluid" />
+            <h5>ព្យាបាលបេះដូង</h5>
+          </div>
+        </a>
+      </div>
+
+      <!-- Department 5 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+        <a href="../pages/department-detail.html" class="text-decoration-none">
+          <div class="department-card text-center">
+            <img src="../assets/img/department5.svg" alt="សរសៃប្រសាទ" class="img-fluid" />
+            <h5>សរសៃប្រសាទ</h5>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
     </section>
+
     <!-- ===============DEPARTMENT [END]================ -->
 
 
-       <section class="price-package mt-5 pt-5">
+   <section class="price-package">
           <div class="container">
-            <div class="row g-4">
+              <h2>កញ្ចប់ <span>តម្លៃ</span> សម្រាប់អ្នកជំងឺ</h2>
+
+            <div class="row mt-3 g-4">
           
                 <!-- Senior Wellness Plan -->
               <div class="col-lg-4 col-md-6">
@@ -487,8 +515,8 @@
                           </div>
                       </div>
                       <div class="cta-section">
-                          <a href="#" class="cta-button">
-                              Get Started
+                          <a href="../pages/payment.html" class="cta-button">
+                              កក់ណាត់ជួបគ្រូពេទ្យ
                               <i class="fas fa-arrow-right"></i>
                           </a>
                       </div>
@@ -534,8 +562,8 @@
                           </div>
                       </div>
                       <div class="cta-section">
-                          <a href="#" class="cta-button">
-                              Get Started
+                          <a href="../pages/payment.html" class="cta-button">
+                              កក់ណាត់ជួបគ្រូពេទ្យ
                               <i class="fas fa-arrow-right"></i>
                           </a>
                       </div>
@@ -580,15 +608,15 @@
                           </div>
                       </div>
                       <div class="cta-section">
-                          <a href="#" class="cta-button">
-                              Get Started
+                          <a href="../pages/payment.html" class="cta-button">
+                            កក់ណាត់ជួបគ្រូពេទ្យ
                               <i class="fas fa-arrow-right"></i>
                           </a>
                       </div>
                   </div>
               </div>
           </div>
-        </section>
+    </section>
 
 
 
@@ -604,12 +632,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-1.jpg"
+                  href="assets/img/gallery/gallery-1.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-1.jpg"
+                    src="assets/img/gallery/gallery-1.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -621,12 +649,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-2.jpg"
+                  href="assets/img/gallery/gallery-2.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-2.jpg"
+                    src="assets/img/gallery/gallery-2.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -638,12 +666,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-3.jpg"
+                  href="assets/img/gallery/gallery-3.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-3.jpg"
+                    src="assets/img/gallery/gallery-3.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -655,12 +683,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-4.jpg"
+                  href="assets/img/gallery/gallery-4.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-4.jpg"
+                    src="assets/img/gallery/gallery-4.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -672,12 +700,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-5.jpg"
+                  href="assets/img/gallery/gallery-5.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-5.jpg"
+                    src="assets/img/gallery/gallery-5.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -689,12 +717,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-6.jpg"
+                  href="assets/img/gallery/gallery-6.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-6.jpg"
+                    src="assets/img/gallery/gallery-6.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -706,12 +734,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-7.jpg"
+                  href="assets/img/gallery/gallery-7.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-7.jpg"
+                    src="assets/img/gallery/gallery-7.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -723,12 +751,12 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                 <a
-                  href="../assets/img/gallery/gallery-8.jpg"
+                  href="assets/img/gallery/gallery-8.jpg"
                   class="glightbox"
                   data-gallery="images-gallery"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-8.jpg"
+                    src="assets/img/gallery/gallery-8.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -740,101 +768,101 @@
         </div>
       </section>
           <!-- ===== FAQ SECTION [START]==== -->
-      <section class="question my-5">
-        <div class="faq py-5">
-            <div class="container">
-              <!-- Section Title -->
-              <div class="faq-title text-center mb-4">
-                <h2 class="title">អ្វីដែលអ្នកជំងឺ <span>តែងតែសួរ</span></h2>
-              </div>
+<section class="question my-5">
+   <div class="faq py-5">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="faq-title text-center mb-4">
+          <h2 class="title">អ្វីដែលអ្នកជំងឺ <span>តែងតែសួរ</span></h2>
+        </div>
 
-              <!-- Accordion -->
-              <div class="accordion" id="faqAccordion">
-                <!-- Item 1 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                      តើ ProHealth ផ្តល់សេវាកម្មអ្វីខ្លះ?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      ProHealth ផ្តល់ជូននូវសេវាកម្មវេជ្ជសាស្រ្ត
-                      និងថែទាំសុខភាពជាច្រើនប្រភេទ តាមតម្រូវការរបស់អ្នក។
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo">
-                      តើខ្ញុំត្រូវកំណត់ពេលណាត់ជួបជាមួយ ProHealth ដោយរបៀបណា?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      អ្នកអាចកំណត់ពេលណាត់ជួបតាមអ៊ីនធឺណិត
-                      ឬដោយទាក់ទងក្រុមសេវាកម្មអតិថិជនរបស់យើង។
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree">
-                      តើអ្នកទទួលយកការធានារ៉ាប់រងទេ?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      បាទ/ចាស យើងទទួលយកអ្នកផ្តល់សេវាធានារ៉ាប់រងធំៗភាគច្រើន។
-                      សូមបញ្ជាក់ជាមួយក្រុមការងាររបស់យើងសម្រាប់ព័ត៌មានលម្អិត។
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour">
-                      តើខ្ញុំគួរនាំយកអ្វីទៅការណាត់ជួបរបស់ខ្ញុំ?
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      សូមនាំយកអត្តសញ្ញាណប័ណ្ណដែលមានសុពលភាព ប័ណ្ណធានារ៉ាប់រង
-                      និងកំណត់ត្រាវេជ្ជសាស្ត្រពីមុន ប្រសិនបើមាន។
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive">
-                      តើខ្ញុំស្នើសុំការបំពេញតាមវេជ្ជបញ្ជាដោយរបៀបណា?
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      អ្នកអាចស្នើសុំការបំពេញតាមវេជ្ជបញ្ជាតាមរយៈវេបសាយអនឡាញរបស់យើង
-                      ឬដោយទាក់ទងការិយាល័យផ្ទាល់។
-                    </div>
-                  </div>
-                </div>
+        <!-- Accordion -->
+        <div class="accordion" id="faqAccordion">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                តើ ProHealth ផ្តល់សេវាកម្មអ្វីខ្លះ?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                ProHealth ផ្តល់ជូននូវសេវាកម្មវេជ្ជសាស្រ្ត
+                និងថែទាំសុខភាពជាច្រើនប្រភេទ តាមតម្រូវការរបស់អ្នក។
               </div>
             </div>
           </div>
 
-      </section>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo">
+                តើខ្ញុំត្រូវកំណត់ពេលណាត់ជួបជាមួយ ProHealth ដោយរបៀបណា?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                អ្នកអាចកំណត់ពេលណាត់ជួបតាមអ៊ីនធឺណិត
+                ឬដោយទាក់ទងក្រុមសេវាកម្មអតិថិជនរបស់យើង។
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree">
+                តើអ្នកទទួលយកការធានារ៉ាប់រងទេ?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                បាទ/ចាស យើងទទួលយកអ្នកផ្តល់សេវាធានារ៉ាប់រងធំៗភាគច្រើន។
+                សូមបញ្ជាក់ជាមួយក្រុមការងាររបស់យើងសម្រាប់ព័ត៌មានលម្អិត។
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour">
+                តើខ្ញុំគួរនាំយកអ្វីទៅការណាត់ជួបរបស់ខ្ញុំ?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                សូមនាំយកអត្តសញ្ញាណប័ណ្ណដែលមានសុពលភាព ប័ណ្ណធានារ៉ាប់រង
+                និងកំណត់ត្រាវេជ្ជសាស្ត្រពីមុន ប្រសិនបើមាន។
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive">
+                តើខ្ញុំស្នើសុំការបំពេញតាមវេជ្ជបញ្ជាដោយរបៀបណា?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                អ្នកអាចស្នើសុំការបំពេញតាមវេជ្ជបញ្ជាតាមរយៈវេបសាយអនឡាញរបស់យើង
+                ឬដោយទាក់ទងការិយាល័យផ្ទាល់។
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
    
-        <!-- ===== FAQ SECTION [END]==== -->
+    <!-- ===== FAQ SECTION [END]==== -->
      <!-- Contact Section -->
       <section id="contact" class="contact section my-5">
         <!-- Section Title -->
@@ -966,9 +994,8 @@
         </div>
       </section>
       <!-- /Contact Section -->
-
+</main>
   
-
     <!-- ====================Footer=============================== -->
     <footer class="footer pt-3 text-white">
 
@@ -1029,19 +1056,19 @@
               <h5 class="fw-bold mb-3">សេវាសុខភាព</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
+                  <a href="#" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
+                  <a href="#" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-heart me-2"></i>រោគបេះដូង</a>
+                  <a href="#" class="f-link"><i class="fas fa-heart me-2"></i>រោគបេះដូង</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
+                  <a href="#" class="f-link"><i class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
+                  <a href="#" class="f-link"><i class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
                 </li>
               </ul>
             </div>
@@ -1070,7 +1097,7 @@
               <div class="col text-center">
                 <p class="text-white-50 mb-0">
                   &copy; 2025 គ្លីនិកឌីជីថល | រក្សាសិទ្ធិដោយ G-15 |
-                  <a href="department_page.html" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
+                  <a href="#" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
                 </p>
               </div>
             </div>
@@ -1083,28 +1110,26 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        grabCursor: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          768: { slidesPerView: 2 },
-          1200: { slidesPerView: 3 },
-        },
-      });
+ 
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: { // tablet
+        slidesPerView: 2,
+      },
+      1200: { // desktop
+        slidesPerView: 3,
+      }
+    }
+  });
+
+
       // Header scroll class
 
       window.addEventListener("scroll", function () {
