@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,71 +6,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>doctor-detail</title>
-    <link rel="icon" href="../assets/img/logo2.png">
+        <link href="../assets/img/logo1.png" rel="icon" />
+         <!-- ---------font-awesome---------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" href="../assets/img/logo2.png">
+    <!-- bootrap icon -->
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+      
+    />  
     <link rel="stylesheet" href="../assets/css/bootstrap.css" />
     <link rel="stylesheet" href="../assets/css/doctor_detail.css" />
+
 </head>
 
 <body>
-    <header class="fixed-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-xl navbar-dark">
-                <div class="container-fluid">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="../index.html">
-                        <img src="../assets/img/logo1.png" alt="Logo" height="40" />
-                    </a>
+<!-- ======= HEADER ======= -->
+ 
+<header class="fixed-top">
+  <div class="container">
+    <nav class="navbar navbar navbar-expand-xl">
+      <div class="container-fluid">
 
-                    <!-- Toggler for mobile -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="index.html">
+          <img src="../assets/img/logo1.png" alt="Clinic Digital Logo" height="40" class="me-2">
+        </a>
 
-                    <!-- Navbar Links -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold text-uppercase">
-                            <li class="nav-item px-3">
-                                <a class="nav-link active" href="../index.html">ទំព័រដើម</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link" href="aboutUs.html">អំពីពួកយើង</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link" href="appointment.html">កាណាត់ជួប</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link" href="department-detail.html">សេវាកម្ម</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link" href="doctor.html">វេជ្ជបណ្ឌិត</a>
-                            </li>
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+          <!-- Center Nav links -->
+          <ul class="navbar-nav fw-bold text-uppercase mx-auto">
+            <li class="nav-item px-2">
+              <a class="nav-link active text-white" href="../pages/homepage.html">ទំព័រដើម</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link text-white" href="../pages/aboutUs.html">អំពីយើង</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link text-white" href="../pages/appointment.html">ការណាត់ជួប</a>
+            </li>
 
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown px-2">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button"
+                data-bs-toggle="dropdown">សេវាកម្ម</a>
+              <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="../pages/department_page.html">សេវាកម្មទាំងអស់</a></li>
+                <li><a class="dropdown-item text-white" href="../pages/department-detail.html">សេវាកម្មលំអិត</a></li>
+              </ul>
+            </li>
 
+            <!-- Pages Dropdown -->
+            <li class="nav-item dropdown px-2">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button"
+                data-bs-toggle="dropdown">ទំព័រផ្សេងៗ</a>
+              <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="blog.html">ពត៌មានថ្មីៗ</a></li>
+                <li><a class="dropdown-item text-white" href="timetable.html">ពេលវេលា</a></li>
+                <li><a class="dropdown-item text-white" href="pricing-plan.html">តម្លៃ</a></li>
+                <li><hr class="dropdown-divider bg-white"></li>
+                <li><a class="dropdown-item text-white" href="question.html">សាកសួរព័ត៍មាន</a></li>
+              </ul>
+            </li>
 
-                            <li class="nav-item px-3">
-                                <a class="nav-link" href="contact_us.html">ទាក់ទងមកពួកយើង</a>
-                            </li>
-                        </ul>
-                    </div>
+            <li class="nav-item px-2">
+              <a class="nav-link text-white" href="../pages/doctor.html">វេជ្ជបណ្ឌិត</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link text-white" href="../pages/contact_us.html">ទំនាក់ទំនង</a>
+            </li>
+          </ul>
 
-                    <!-- Buttons (Sign In / Register) -->
-                    <div class="d-flex ms-3">
-                        <a href="patient-signup.html" class="btn btn-custom btn-signin me-2">
-                            ចុះឈ្មោះ
-                        </a>
-                        <a href="patient-login.html" class="btn btn-custom btn-register">
-                            ចូលគណនី
-                        </a>
-                    </div>
+          <!-- Right Side (Messages + Notifications + Profile) -->
+          <div class="d-flex align-items-center">
+            <!-- Messages -->
+            <div class="dropdown me-3">
+              <a class="text-white position-relative" href="#" id="messagesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-envelope-fill fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end rounded-3"
+                style="min-width: 250px; background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
+                <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
+                <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
+              </ul>
+            </div>
 
-                </div>
-            </nav>
-        </div>
-    </header>
+            <!-- Notifications -->
+            <div class="dropdown me-3">
+              <a class="text-white position-relative" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-bell-fill fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end rounded-3"
+                style="min-width: 250px; background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="#">Notification 1</a></li>
+                <li><a class="dropdown-item text-white" href="#">Notification 2</a></li>
+                <li><a class="dropdown-item text-white" href="#">Notification 3</a></li>
+              </ul>
+            </div>
+
+            <!-- Profile -->
+            <div class="dropdown">
+              <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#"
+                id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../assets/img/user.png" alt="user" width="32" height="32" class="rounded-circle me-2">
+                សំបាត់
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
+                <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
+                <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
+                <li><hr class="dropdown-divider bg-white"></li>
+                <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- End collapse -->
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <!-- ==============HEADER[END]=================== -->
 
     <main>
         <div class="space-170"></div>
@@ -201,20 +273,17 @@
                                 </h2>
                                 <ul class="decrip-degree mt-4">
                                     <li>
-                                        <p class="medium heading_color mb-0 fs-4">
-                                            សាកលវិទ្យាល័យកាលីហ្វ័រញ៉ា សាន់ហ្វ្រាន់ស៊ីស្កូ</p>
-                                        <p class="mb-0">សញ្ញាបត្រវេជ្ជសាស្ត្រ</p>
+                                        <p class="medium heading_color mb-0 fs-5">
+                                            សិក្សាថ្នាក់បរិញ្ញាបត្រ វេជ្ជសាស្រ្តទូទៅនៅ សាកលវិទ្យាល័យវិទ្យាសាស្រ្តសុខាភិបាល
+                                        </p>
                                     </li>
-                                    <li class="my-5">
-                                        <p class="medium heading_color mb-0">មជ្ឈមណ្ឌលវេជ្ជសាស្ត្រ
-                                            សាកលវិទ្យាល័យកាលីហ្វ័រញ៉ា ឡូសអេនជឺលេស (UCLA) </p>
-                                        <p class="mb-0">បានបញ្ចប់ការបណ្តុះបណ្តាលស្នាក់នៅក្នុងចិត្តវិទ្យា</p>
+                                    <li class="my-3">
+                                        <p class="medium heading_color mb-0 fs-5">បន្តសិក្សាថ្នាក់បណ្ឌិតវេជ្ជសាស្រ្តឯកទេសនៅវិទ្យាស្ថានវេជ្ជសាស្រ្ត និងសុខាភិបាល ដើម្បីពង្រឹងជំនាញវិជ្ជាជីវៈក្នុងការព្យាបាលអ្នកជំងឺ</p>
                                     </li>
                                     <li>
-                                        <p class="medium heading_color mb-0">
-                                            សាកលវិទ្យាល័យកាលីហ្វ័រញ៉ា Berkeley
+                                        <p class="medium heading_color mb-0 fs-5">
+                                            ចូលរួមវគ្គបណ្ដុះបណ្ដាល និងសិក្ខាសាលាវិជ្ជាសាស្រ្តនៅមន្ទីរពេទ្យសាកលវិទ្យាល័យ និងមន្ទីរពេទ្យជាតិ
                                         </p>
-                                        <p class="mb-0">អនុបណ្ឌិតផ្នែកសុខភាពសាធារណៈ</p>
                                     </li>
                                 </ul>
                             </div>
@@ -236,22 +305,19 @@
                                 </h2>
                                 <ul class="decrip-degree mt-4">
                                     <li>
-                                        <p class="medium heading_color mb-0 ">
+                                        <p class="medium heading_color  fs-5">
                                             បានធ្វើការនៅក្នុងគ្លីនិកសុខភាពផ្លូវចិត្តសហគមន៍ ការអនុវត្តឯកជន
                                             និងមជ្ឈមណ្ឌលវេជ្ជសាស្ត្រសិក្សា</p>
-
                                     </li>
-                                    <li class="my-5">
-                                        <p class="medium heading_color mb-0">ជំនាញក្នុងការព្យាបាលជំងឺផ្លូវចិត្ត
+                                    <li class="my-3">
+                                        <p class="medium heading_color  fs-5">ជំនាញក្នុងការព្យាបាលជំងឺផ្លូវចិត្ត
                                             ជំងឺថប់បារម្ភ និងជំងឺផ្លូវចិត្ត</p>
-
                                     </li>
                                     <li>
-                                        <p class="medium heading_color mb-0">
+                                        <p class="medium heading_color fs-5">
                                             បទពិសោធន៍គ្រប់គ្រងករណីស្មុគស្មាញដែលពាក់ព័ន្ធទាំងសុខភាពផ្លូវចិត្ត
                                             និងបញ្ហាវេជ្ជសាស្ត្រ
                                         </p>
-                                        <p class="mb-0">Master of Public Health degree</p>
                                     </li>
                                 </ul>
                             </div>
@@ -277,10 +343,10 @@
                                 </h2>
                                 <ul>
                                     <li>
-                                        <p class="medium heading_color mb-0">សមាជិកនៃសមាគមចិត្តសាស្រ្តអាមេរិក (FAPA)</p>
+                                        <p class="medium heading_color mt-4 fs-5">សមាជិកនៃសមាគមចិត្តសាស្រ្តអាមេរិក (FAPA)</p>
                                     </li>
                                     <li>
-                                        <p class="medium heading_color mb-0">
+                                        <p class="medium heading_color mb-0 fs-5">
                                             ត្រូវបានទទួលស្គាល់សម្រាប់ការរួមចំណែកស្រាវជ្រាវជាមួយនឹងជំនួយពីវិទ្យាស្ថានជាតិសុខភាពផ្លូវចិត្ត
                                             (NIMH) និងមូលនិធិអាមេរិកសម្រាប់ការការពារការធ្វើអត្តឃាត</p>
                                     </li>
@@ -292,15 +358,15 @@
             </div>
         </section>
 
-        <section class="appointment mt-5 py-5">
+        <section class="appointment mt-5 py-5 mb-5">
             <div class="bg-banner container-fluid"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 d-none d-md-block">
 
                         <div class="card border-0 pt-5 mt-5">
-                            <img src="../assets/img/Appointment/appointment_img.png" class="appointment-image img-fluid"
-                                alt="A friendly doctor giving a thumbs up">
+                            <img src="../assets/img/Appointment/appointment_img.png"
+                               class="appointment-image rounded-0 d-none d-lg-block" alt="" />
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -385,8 +451,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-12 mt-4 btn-submit">
-                                                <button class="btn btn-primary fw-bold" type="submit">Submit
-                                                    form</button>
+                                                <button class="btn btn-primary" type="submit">បញ្ចូលទិន្នន័យ<i class="fa-solid fa-arrow-right"></i></button>
                                             </div>
                                         </form>
                                     </div>
@@ -410,10 +475,7 @@
         <!-- Brand -->
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <img src="assets/img/logo1.png" alt="" width="160" class="mb-3" />
-            <p class="text-white-50 mx-auto" style="max-width: 500px">
-              សុខភាពរបស់អ្នក ជាមួយបច្ចេកវិទ្យារបស់យើង មិនត្រឹមតែបើកទ្វារទៅកាន់សក្តានុពលគ្មានកំណត់ទេ ប៉ុន្តែធ្វើឲ្យការថែទាំកាន់តែទំនើប សុវត្ថិភាព និងងាយស្រួលជាងមុន។
-            </p>
+          
           </div>
         </div>
 
@@ -438,19 +500,19 @@
             <h5 class="fw-bold mb-3">តំណភ្ជាប់រហ័ស</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="#" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
+                <a href="aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
+                <a href="department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
+                <a href="doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
+                <a href="timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
+                <a href="appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
               </li>
             </ul>
           </div>
@@ -460,19 +522,19 @@
             <h5 class="fw-bold mb-3">សេវាសុខភាព</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="#" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
+                <a href="department-detail.html" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
+                <a href="department-detail.html" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-heart me-2"></i>រោគបេះដូង</a>
+                <a href="department-detail.html" class="f-link"><i class="fas fa-heart me-2"></i>រោគបេះដូង</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
+                <a href="department-detail.html" class="f-link"><i class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
               </li>
               <li>
-                <a href="#" class="f-link"><i class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
+                <a href="department-detail.html" class="f-link"><i class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
               </li>
             </ul>
           </div>
@@ -501,7 +563,7 @@
           <div class="col text-center">
             <p class="text-white-50 mb-0">
               &copy; 2025 គ្លីនិកឌីជីថល | រក្សាសិទ្ធិដោយ G-15 |
-              <a href="#" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
+              <a href="department_page.html" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
             </p>
           </div>
         </div>

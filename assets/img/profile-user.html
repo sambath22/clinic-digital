@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ពត៌មានផ្ទាល់ខ្លួន</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #e0f2fe;
+        font-family: "Khmer OS Battambang", sans-serif;
+        color: #1e3a8a;
+      }
+      .profile-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        max-width: 800px;
+        margin: 50px auto;
+      }
+      .profile-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #cbd5e1;
+        padding-bottom: 15px;
+      }
+      .profile-header img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+        border: 3px solid #1e3a8a;
+      }
+      .profile-header h3 {
+        margin: 0;
+        font-weight: bold;
+      }
+      .profile-header p {
+        margin: 0;
+        color: #555;
+      }
+      .info-item {
+        margin-bottom: 15px;
+      }
+      .info-label {
+        font-weight: bold;
+        color: #1e3a8a;
+      }
+      .info-value {
+        color: #555;
+      }
+      .btn-edit {
+        background: #1e3a8a;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 25px;
+        padding: 8px 20px;
+        transition: 0.3s;
+      }
+      .btn-edit:hover {
+        background: #3b82f6;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile-header">
+          <img
+            id="profileImage"
+            src="../assets/img/user.png"
+            alt="Profile Picture"
+          />
+          <div>
+            <h3 id="profileName">ឈ្មោះ</h3>
+            <p id="profileRole">តួនាទី</p>
+          </div>
+        </div>
+
+        <div class="profile-info">
+          <div class="row">
+            <div class="col-md-6 info-item">
+              <span class="info-label">អ៊ីមែល៖</span>
+              <span class="info-value" id="profileEmail"></span>
+            </div>
+            <div class="col-md-6 info-item">
+              <span class="info-label">លេខទូរស័ព្ទ៖</span>
+              <span class="info-value" id="profilePhone"></span>
+            </div>
+            <div class="col-md-6 info-item">
+              <span class="info-label">អាសយដ្ឋាន៖</span>
+              <span class="info-value" id="profileAddress"></span>
+            </div>
+            <div class="col-md-6 info-item">
+              <span class="info-label">ថ្ងៃកំណើត៖</span>
+              <span class="info-value" id="profileDob"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-end mt-3">
+          <a href="edit-profile.html" class="btn btn-edit">កែប្រែពត៌មាន</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", function () {
+        const data = JSON.parse(localStorage.getItem("profileData")) || {
+          name: "អន សម្បត្តិ",
+          role: "អ្នកជំងឺ",
+          email: "sambath@example.com",
+          phone: "+855 12 345 678",
+          address: "ភ្នំពេញ, កម្ពុជា",
+          dob: "2000-01-01",
+          image: "../assets/img/user.png",
+        };
+
+        document.getElementById("profileName").textContent = data.name;
+        document.getElementById("profileRole").textContent = data.role;
+        document.getElementById("profileEmail").textContent = data.email;
+        document.getElementById("profilePhone").textContent = data.phone;
+        document.getElementById("profileAddress").textContent = data.address;
+        document.getElementById("profileDob").textContent = data.dob;
+        document.getElementById("profileImage").src = data.image;
+      });
+    </script>
+  </body>
+</html>
