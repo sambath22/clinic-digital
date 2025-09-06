@@ -73,7 +73,6 @@ body {
 
 /* ====================HERO DEPARTMENT [START]================ */
 .hero_department {
-  min-height: 80vh;
   padding-top: 100px;
   /* padding: 800px 10px; */
   background: url("../img/department_img/hero_bg.svg") center/cover no-repeat;
