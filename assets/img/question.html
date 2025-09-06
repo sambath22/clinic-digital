@@ -4,142 +4,282 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>សាកសួរព័ត៍មាន</title>
-    <link href="../assets/img/logo1.png" rel="icon" />
-       <!-- font family cdn -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
+      <link href="../assets/img/logo1.png" rel="icon" />
 
       <!-- bootrap icon -->
-    <link
+      <link
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
           rel="stylesheet"
         />  
+    <link rel="stylesheet" href="../assets/vendor/font-awesome/all.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/css/department_page.css">
     <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
     <!-- ======= HEADER ======= -->
-<header class="fixed-top">
-  <div class="container">
-    <nav class="navbar navbar navbar-expand-xl">
-      <div class="container-fluid">
+    <header class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg rounded-3">
+          <div class="container-fluid">
+            <!-- Logo (Left) -->
+            <a
+              class="navbar-brand fw-bold d-flex align-items-center text-white"
+              href="index.html"
+            >
+              <img
+                src="../assets/img/logo1.png"
+                alt="Clinic Digital Logo"
+                height="40"
+                class="me-2"
+              />
+              Clinic Digital
+            </a>
 
-        <!-- Logo -->
-        <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="index.html">
-          <img src="../assets/img/logo1.png" alt="Clinic Digital Logo" height="40" class="me-2">
-        </a>
+            <!-- Mobile Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Hamburger -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Navbar Menu (CENTER) -->
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="mainNavbar"
+            >
+              <ul class="navbar-nav fw-bold text-uppercase">
+                <li class="nav-item px-2">
+                  <a
+                    class="nav-link active text-white"
+                    href="../pages/index2.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item px-2">
+                  <a class="nav-link text-white" href="../pages/aboutUs.html"
+                    >អំពីពួកយើង</a
+                  >
+                </li>
+                <li class="nav-item px-2">
+                  <a
+                    class="nav-link text-white"
+                    href="../pages/appointment.html"
+                    >ការណាត់ជួប</a
+                  >
+                </li>
 
-        <!-- Collapsible Menu -->
-        <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
-          <!-- Center Nav links -->
-          <ul class="navbar-nav fw-bold text-uppercase mx-auto">
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/homepage.html">ទំព័រដើម</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/aboutUs.html">អំពីយើង</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/appointment.html">ការណាត់ជួប</a>
-            </li>
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown px-2">
+                  <a
+                    class="nav-link dropdown-toggle text-white"
+                    href="#"
+                    id="servicesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    សេវាកម្ម
+                  </a>
+                  <ul
+                    class="dropdown-menu rounded-3"
+                    style="background-color: #1e3a8a"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item text-white"
+                        href="../pages/department_page.html"
+                        >សេវាកម្មទាំងអស់</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-white"
+                        href="../pages/lab.html"
+                        >មន្ទីរពិសោធន៍</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-white"
+                        href="../pages/pharmacy.html"
+                        >ឱសថស្ថាន</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider bg-white" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item text-white"
+                        href="../pages/emergency.html"
+                        >សេវាកម្មបន្ទាន់</a
+                      >
+                    </li>
+                  </ul>
+                </li>
 
-            <!-- Services Dropdown -->
-            <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button"
-                data-bs-toggle="dropdown">សេវាកម្ម</a>
-              <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="../pages/department_page.html">សេវាកម្មទាំងអស់</a></li>
-                <li><a class="dropdown-item text-white" href="../pages/emergency.html">សេវាកម្មលំអិត</a></li>
-              </ul>
-            </li>
+                <!-- Pages Dropdown -->
+                <li class="nav-item dropdown px-2">
+                  <a
+                    class="nav-link dropdown-toggle text-white"
+                    href="#"
+                    id="pagesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    ទំព័រផ្សេងៗ
+                  </a>
+                  <ul
+                    class="dropdown-menu rounded-3"
+                    style="background-color: #1e3a8a"
+                  >
+                    <li>
+                      <a class="dropdown-item text-white" href="pages/blog.html"
+                        >ពត៌មានថ្មីៗ</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-white"
+                        href="pages/timetable.html"
+                        >ពេលវេលា</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-white"
+                        href="pages/pricing.html"
+                        >តម្លៃ</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider bg-white" /></li>
+                    <li>
+                      <a class="dropdown-item text-white" href="pages/faq.html"
+                        >សាកសួរព័ត៍មាន</a
+                      >
+                    </li>
+                  </ul>
+                </li>
 
-            <!-- Pages Dropdown -->
-            <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button"
-                data-bs-toggle="dropdown">ទំព័រផ្សេងៗ</a>
-              <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="blog.html">ពត៌មានថ្មីៗ</a></li>
-                <li><a class="dropdown-item text-white" href="timetable.html">ពេលវេលា</a></li>
-                <li><a class="dropdown-item text-white" href="pricing-plan.html">តម្លៃ</a></li>
-                <li><hr class="dropdown-divider bg-white"></li>
-                <li><a class="dropdown-item text-white active" href="question.html">សាកសួរព័ត៍មាន</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/doctor.html">វេជ្ជបណ្ឌិត</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/contact_us.html">ទំនាក់ទំនង</a>
-            </li>
-          </ul>
-
-          <!-- Right Side (Messages + Notifications + Profile) -->
-          <div class="d-flex align-items-center">
-            <!-- Messages -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="messagesDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-envelope-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
+                <li class="nav-item px-2">
+                  <a class="nav-link text-white" href="../pages/doctor.html"
+                    >វេជ្ជបណ្ឌិត</a
+                  >
+                </li>
+                <li class="nav-item px-2">
+                  <a class="nav-link text-white" href="../pages/contact_us.html"
+                    >ទាក់ទងមកពួកយើង</a
+                  >
+                </li>
               </ul>
             </div>
 
-            <!-- Notifications -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="bi bi-bell-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Notification 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 3</a></li>
-              </ul>
-            </div>
+            <!-- Right Side (Icons + Profile Dropdown) -->
+            <div class="d-flex ms-3 align-items-center">
+              <!-- Messages -->
+              <div class="dropdown me-3">
+                <a
+                  class="text-white position-relative"
+                  href="#"
+                  id="messagesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-envelope-fill fs-5"></i>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  >
+                    3
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end rounded-3"
+                  style="min-width: 250px; background-color: #1e3a8a"
+                >
+                  <li>
+                    <a class="dropdown-item text-white" href="#">Message 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white" href="#">Message 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white" href="#">Message 3</a>
+                  </li>
+                </ul>
+              </div>
 
-            <!-- Profile -->
-            <div class="dropdown">
-              <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#"
-                id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="../assets/img/user.png" alt="user" width="32" height="32" class="rounded-circle me-2">
-                សំបាត់
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
-                <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
-                <li><hr class="dropdown-divider bg-white"></li>
-                <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
-              </ul>
+              <!-- Notification Link -->
+              <div class="me-3">
+                <a
+                  class="text-white position-relative"
+                  href="../notification.html"
+                  id="notificationsLink"
+                >
+                  <i class="bi bi-bell-fill fs-5"></i>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  >
+                    3
+                    <span class="visually-hidden">unread notifications</span>
+                  </span>
+                </a>
+              </div>
+
+              <!-- Profile Dropdown -->
+              <div class="dropdown">
+                <a
+                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../assets/img/user.png"
+                    alt="user"
+                    width="32"
+                    height="32"
+                    class="rounded-circle me-2"
+                  />
+                  សំបាត់
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end rounded-3"
+                  style="background-color: #1e3a8a"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item text-white"
+                      href="../pages/patient-dashboard.html"
+                      >ផ្ទាំងគ្រប់គ្រង</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white"
+                      href="../pages/profile-user.html"
+                      >ពត៌មានផ្ទាល់ខ្លួន</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider bg-white" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item text-danger"
+                      href="../pages/logout.html"
+                      >ចាកចេញ</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div> <!-- End collapse -->
+        </nav>
       </div>
-    </nav>
-  </div>
-</header>
-
-  <!-- ==============HEADER[END]=================== -->
+    </header>
     <main>
     
          <!-- HERO-BANNER [START]-->
@@ -309,6 +449,11 @@
           <!-- Brand -->
           <div class="row mb-5">
             <div class="col-12 text-center">
+              <img src="../assets/img/logo1.png" alt="" width="160" class="mb-3" />
+              <p class="text-white-50 mx-auto" style="max-width: 500px">
+                សុខភាពរបស់អ្នក ជាមួយបច្ចេកវិទ្យារបស់យើង មិនត្រឹមតែបើកទ្វារទៅកាន់សក្តានុពលគ្មានកំណត់ទេ
+                ប៉ុន្តែធ្វើឲ្យការថែទាំកាន់តែទំនើប សុវត្ថិភាព និងងាយស្រួលជាងមុន។
+              </p>
             </div>
           </div>
 
@@ -333,19 +478,19 @@
               <h5 class="fw-bold mb-3">តំណភ្ជាប់រហ័ស</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
+                  <a href="pages/aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
+                  <a href="pages/department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
+                  <a href="pages/doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
+                  <a href="pages/timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
                 </li>
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
+                  <a href="pages/appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
                 </li>
               </ul>
             </div>
@@ -396,7 +541,7 @@
               <div class="col text-center">
                 <p class="text-white-50 mb-0">
                   &copy; 2025 គ្លីនិកឌីជីថល | រក្សាសិទ្ធិដោយ G-15 |
-                  <a href="department_page.html" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
+                  <a href="#" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
                 </p>
               </div>
             </div>

@@ -353,9 +353,12 @@ textarea {
   background: #1976d2;
   top: 64%;
   transform: translateY(-50%);
+<<<<<<< HEAD
+=======
 }
 .experience .medium{
   margin-top: -20px;
+>>>>>>> 6d64cb9fa33840445b96452b5d0fa78d33897797
 }
 .fa-regular {
   color: #0ea6df;
@@ -401,8 +404,13 @@ textarea {
 }
 
 .appointment .card .appointment-image {
+<<<<<<< HEAD
+  max-width: 100%;
+  height: auto;
+=======
   width: 100%;
   height: 98%;
+>>>>>>> 6d64cb9fa33840445b96452b5d0fa78d33897797
   display: block;
 }
 

@@ -124,6 +124,18 @@ header a.nav-link {
   cursor: pointer;
   margin: auto;
 }
+<<<<<<< HEAD
+/*===================== footer================================ */
+.footer {
+  background: linear-gradient(to left, #04326b, #062c5a, #0b2545 100%);
+}
+.footer .footer-logo {
+  width: 160px;
+  cursor: pointer;
+  margin: auto;
+}
+=======
+>>>>>>> 6d64cb9fa33840445b96452b5d0fa78d33897797
 .footer .f-link {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;

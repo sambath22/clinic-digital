@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,54 +47,54 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
- <!-- ======= HEADER ======= -->
- 
+    <!-- ======= HEADER ======= -->
 <header class="fixed-top">
   <div class="container">
-    <nav class="navbar navbar navbar-expand-xl">
+    <nav class="navbar navbar-expand-lg rounded-3" >
       <div class="container-fluid">
 
-        <!-- Logo -->
+        <!-- Logo (Left) -->
         <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="index.html">
           <img src="../assets/img/logo1.png" alt="Clinic Digital Logo" height="40" class="me-2">
         </a>
 
-        <!-- Hamburger -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Collapsible Menu -->
-        <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
-          <!-- Center Nav links -->
-          <ul class="navbar-nav fw-bold text-uppercase mx-auto">
+        <!-- Navbar Menu (CENTER) -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+          <ul class="navbar-nav fw-bold text-uppercase">
             <li class="nav-item px-2">
-              <a class="nav-link active text-white" href="../pages/homepage.html">ទំព័រដើម</a>
+              <a class="nav-link  text-white" href="homepage.html">ទំព័រដើម</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/aboutUs.html">អំពីយើង</a>
+              <a class="nav-link text-white" href="aboutUs.html">អំពីយើង</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/appointment.html">ការណាត់ជួប</a>
+              <a class="nav-link text-white" href="appointment.html">ការណាត់ជួប</a>
             </li>
 
             <!-- Services Dropdown -->
             <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button"
-                data-bs-toggle="dropdown">សេវាកម្ម</a>
+              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                សេវាកម្ម
+              </a>
               <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="../pages/department_page.html">សេវាកម្មទាំងអស់</a></li>
-                <li><a class="dropdown-item text-white" href="../pages/emergency.html">សេវាកម្មលំអិត</a></li>
+                <li><a class="dropdown-item text-white active" href="department_page.html">សេវាកម្មទាំងអស់</a></li>
+                <li><a class="dropdown-item text-white" href="department-detail.html">សេវាកម្មលំអិត</a></li>
+
               </ul>
             </li>
 
             <!-- Pages Dropdown -->
             <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button"
-                data-bs-toggle="dropdown">ទំព័រផ្សេងៗ</a>
+              <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">
+               ទំព័រផ្សេងៗ
+              </a>
               <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="blog.html">ពត៌មានថ្មីៗ</a></li>
+                <li><a class="dropdown-item text-white" href="blog.html">ប្លុកថ្មីៗ</a></li>
                 <li><a class="dropdown-item text-white" href="timetable.html">ពេលវេលា</a></li>
                 <li><a class="dropdown-item text-white" href="pricing-plan.html">តម្លៃ</a></li>
                 <li><hr class="dropdown-divider bg-white"></li>
@@ -104,67 +103,65 @@
             </li>
 
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/doctor.html">វេជ្ជបណ្ឌិត</a>
+              <a class="nav-link text-white" href="doctor.html">វេជ្ជបណ្ឌិត</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/contact_us.html">ទំនាក់ទំនង</a>
+              <a class="nav-link text-white" href="contact_us.html">ទំនាក់ទំនង</a>
             </li>
           </ul>
+        </div>
 
-          <!-- Right Side (Messages + Notifications + Profile) -->
-          <div class="d-flex align-items-center">
-            <!-- Messages -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="messagesDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-envelope-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
-              </ul>
-            </div>
+       <!-- Right Side (Icons + Profile Dropdown) -->
+<div class="d-flex ms-3 align-items-center">
+  <!-- Messages -->
+  <div class="dropdown me-3">
+    <a class="text-white position-relative" href="#" id="messagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-envelope-fill fs-5"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        3
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end rounded-3" style="min-width: 250px; background-color: #1e3a8a;">
+      <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
+      <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
+      <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
+    </ul>
+  </div>
 
-            <!-- Notifications -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="bi bi-bell-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Notification 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 3</a></li>
-              </ul>
-            </div>
+<!-- Notification Link -->
+<div class="me-3">
+  <a class="text-white position-relative" href="notification.html" id="notificationsLink">
+    <i class="bi bi-bell-fill fs-5"></i>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      3
+      <span class="visually-hidden">unread notifications</span>
+    </span>
+  </a>
+</div>
 
-            <!-- Profile -->
-            <div class="dropdown">
-              <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#"
-                id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="../assets/img/user.png" alt="user" width="32" height="32" class="rounded-circle me-2">
-                សំបាត់
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
-                <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
-                <li><hr class="dropdown-divider bg-white"></li>
-                <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- End collapse -->
+
+  <!-- Profile Dropdown -->
+  <div class="dropdown">
+    <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="../assets/img/user.png" alt="user" width="32" height="32" class="rounded-circle me-2">
+      សំបាត់
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
+      <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
+      <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
+      <li><hr class="dropdown-divider bg-white"></li>
+      <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
+    </ul>
+  </div>
+</div>
+
       </div>
     </nav>
   </div>
+
 </header>
 
-  <!-- ==============HEADER[END]=================== -->
     <main>
       <!-- HERO-BANNER [START]-->
       <section class="hero_department d-flex align-items-center" id="hero">
@@ -322,7 +319,11 @@
           <!-- Brand -->
           <div class="row mb-5">
             <div class="col-12 text-center">
-           
+              <img src="assets/img/logo1.png" alt="" width="160" class="mb-3" />
+              <p class="text-white-50 mx-auto" style="max-width: 500px">
+                សុខភាពរបស់អ្នក ជាមួយបច្ចេកវិទ្យារបស់យើង មិនត្រឹមតែបើកទ្វារទៅកាន់សក្តានុពលគ្មានកំណត់ទេ
+                ប៉ុន្តែធ្វើឲ្យការថែទាំកាន់តែទំនើប សុវត្ថិភាព និងងាយស្រួលជាងមុន។
+              </p>
             </div>
           </div>
 

@@ -94,7 +94,7 @@
         }
       }
 
-      /* Multi-step modal */
+      /* Multi-step modal styles */
       .step {
         display: none;
       }
@@ -114,8 +114,8 @@
         background: #dfe6ed;
         color: #777;
         font-weight: 500;
-        font-size: 14px;
         transition: all 0.3s ease;
+        font-size: 14px;
       }
       .step-indicator .active-step {
         background: #3498db;
@@ -138,10 +138,10 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <h2>Clinic Digital</h2>
-      <a href="patient-dashboard.html">ផ្ទៃដើម</a>
-      <a href="../pages/appointment-flow.html"><b>ការណាត់ជួប</b></a>
-      <a href="../pages/medical-history.html">ប្រវត្តិក្នុងការពិនិត្យ</a>
-      <a href="../pages/notification.html">សារ / ជូនដំណឹង</a>
+      <a href="pages/patient-dashboard.html">ផ្ទៃដើម</a>
+      <a href="../pages/appointment.html"><b>ការណាត់ជួប</b></a>
+      <a href="../pages/medical-history.html">ប្រវត្តិវេជ្ជសាស្ត្រ</a>
+      <a href="../pages/notifications.html">សារ / ជូនដំណឹង</a>
       <a href="../pages/profile-user.html">ពត៌មានគណនី</a>
       <a href="../pages/logout.html">ចាកចេញ</a>
     </div>
@@ -171,7 +171,19 @@
                 <th>ជម្រើស</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              <tr>
+                <td>10/09/2025</td>
+                <td>09:00</td>
+                <td>Dr. Sokha</td>
+                <td>Cardiology</td>
+                <td><span class="badge bg-info">បានកក់</span></td>
+                <td>
+                  <button class="btn btn-sm btn-warning">ផ្លាស់ប្តូរ</button>
+                  <button class="btn btn-sm btn-danger">លុប</button>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -191,7 +203,7 @@
       </div>
     </div>
 
-    <!-- Booking Modal -->
+    <!-- Multi-step Booking Modal -->
     <div class="modal fade" id="bookingModal" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
@@ -211,7 +223,7 @@
               <div id="indicator4">សម្រេច</div>
             </div>
 
-            <!-- Step 1: Choose Doctor -->
+            <!-- Step 1 -->
             <div class="step active" id="step1">
               <div class="mb-3">
                 <label class="form-label">ជ្រើសរើសវេជ្ជបណ្ឌិត</label>
@@ -238,7 +250,7 @@
               </button>
             </div>
 
-            <!-- Step 2: Review Doctor Info -->
+            <!-- Step 2 -->
             <div class="step" id="step2">
               <div class="text-center mb-3">
                 <img
@@ -261,15 +273,14 @@
               </div>
             </div>
 
-            <!-- Step 3: Payment -->
+            <!-- Step 3 -->
             <div class="step" id="step3">
               <div class="mb-3">
-                <label class="form-label">វិធីបង់ប្រាក់</label>
+                <label class="form-label">ជ្រើសរើសវិធីបង់ប្រាក់</label>
                 <select class="form-select" id="paymentMethod">
                   <option>ABA Bank</option>
                   <option>Wing</option>
                   <option>Visa / MasterCard</option>
-                  <option>Pay Cash at Clinic</option>
                 </select>
               </div>
               <div class="d-flex justify-content-between mt-3">
@@ -293,42 +304,6 @@
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Invoice Modal -->
-    <div class="modal fade" id="invoiceModal" tabindex="-1">
-      <div class="modal-dialog modal-md modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title">វិក័យបត្រ</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-            ></button>
-          </div>
-          <div class="modal-body text-center">
-            <img src="../assets/img/logo1.png" alt="Clinic Logo" width="80" />
-            <h4 class="mt-2">Clinic Digital</h4>
-            <hr />
-            <p><strong>វេជ្ជបណ្ឌិត:</strong> <span id="invDoctor"></span></p>
-            <p><strong>ផ្នែក:</strong> <span id="invDepartment"></span></p>
-            <p><strong>កាលបរិច្ឆេទ:</strong> <span id="invDate"></span></p>
-            <p><strong>ម៉ោង:</strong> <span id="invTime"></span></p>
-            <p><strong>វិធីបង់ប្រាក់:</strong> <span id="invPayment"></span></p>
-            <hr />
-            <p class="text-end"><strong>តម្លៃ: $25</strong></p>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-success" onclick="printInvoice()">
-              🖨️ បោះពុម្ព
-            </button>
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              បិទ
-            </button>
           </div>
         </div>
       </div>
@@ -358,7 +333,6 @@
             "doctorInfo"
           ).innerHTML = `<h5>${doctor}</h5><p>កាលបរិច្ឆេទ: ${date}</p><p>ម៉ោង: ${time}</p>`;
         }
-
         if (step === 4) {
           const doctor = document.getElementById("doctor").value;
           const date = document.getElementById("date").value;
@@ -379,61 +353,17 @@
         const department = doctorFull.split(" - ")[1] || "";
         const date = document.getElementById("date").value;
         const time = document.getElementById("time").value;
-        const payment = document.getElementById("paymentMethod").value;
 
         const row = table.insertRow();
-        const statusBadge = '<span class="badge bg-success">បញ្ចប់</span>';
-        const invoiceButton = `<button class="btn btn-sm btn-info" onclick="viewInvoice('${doctorName}','${department}','${date}','${time}','${payment}')">វិក័យបត្រ</button>`;
+        row.innerHTML = `<td>${date}</td><td>${time}</td><td>${doctorName}</td><td>${department}</td><td><span class="badge bg-info">បានកក់</span></td>
+      <td><button class="btn btn-sm btn-warning">ផ្លាស់ប្តូរ</button> <button class="btn btn-sm btn-danger">លុប</button></td>`;
 
-        row.innerHTML = `<td>${date}</td>
-                       <td>${time}</td>
-                       <td>${doctorName}</td>
-                       <td>${department}</td>
-                       <td>${statusBadge}</td>
-                       <td>
-                         <button class="btn btn-sm btn-warning editBtn">ផ្លាស់ប្តូរ</button>
-                         <button class="btn btn-sm btn-danger deleteBtn">លុប</button>
-                         ${invoiceButton}
-                       </td>`;
-
-        row.querySelector(".deleteBtn").addEventListener("click", () => {
-          if (confirm("តើអ្នកចង់លុបការណាត់ជួបនេះមែនទេ?"))
-            table.deleteRow(row.rowIndex - 1);
-        });
-        row.querySelector(".editBtn").addEventListener("click", () => {
-          document.getElementById("doctor").value = doctorFull;
-          document.getElementById("date").value = date;
-          document.getElementById("time").value = time;
-          document.getElementById("paymentMethod").value = payment;
-          new bootstrap.Modal(document.getElementById("bookingModal")).show();
-          table.deleteRow(row.rowIndex - 1);
-        });
-
-        bootstrap.Modal.getInstance(
+        const modal = bootstrap.Modal.getInstance(
           document.getElementById("bookingModal")
-        ).hide();
-        nextStep(1);
-      }
-
-      function viewInvoice(doctor, department, date, time, payment) {
-        document.getElementById("invDoctor").textContent = doctor;
-        document.getElementById("invDepartment").textContent = department;
-        document.getElementById("invDate").textContent = date;
-        document.getElementById("invTime").textContent = time;
-        document.getElementById("invPayment").textContent = payment;
-        new bootstrap.Modal(document.getElementById("invoiceModal")).show();
-      }
-
-      function printInvoice() {
-        const content = document.querySelector(
-          "#invoiceModal .modal-body"
-        ).innerHTML;
-        const win = window.open("", "_blank", "width=600,height=700");
-        win.document.write(
-          `<html><head><title>វិក័យបត្រ</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></head><body><div class="container mt-4">${content}</div></body></html>`
         );
-        win.document.close();
-        win.print();
+        modal.hide();
+        // reset modal to step 1
+        nextStep(1);
       }
     </script>
   </body>
