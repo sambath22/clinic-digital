@@ -79,6 +79,7 @@ body {
   border-bottom: 2px solid var(--text-color);
 }
 
+<<<<<<< HEAD
 /* Hover Underline Animation */
 /* .navbar .nav-link::after {
   content: "";
@@ -91,6 +92,8 @@ body {
   transition: width 0.3s ease;
 } */
 
+=======
+>>>>>>> 6d64cb9fa33840445b96452b5d0fa78d33897797
 /* Dropdown menu background */
 .dropdown-menu {
   background-color: #02305c;

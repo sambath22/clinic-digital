@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ពត៌មានផ្ទាល់ខ្លួន</title>
+    <title>កែប្រែពត៌មានផ្ទាល់ខ្លួន</title>
     <link href="../assets/img/logo1.png" rel="icon" />
-  <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />  
-    <!-- ---------font-awesome---------- -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+     <!-- ---------font-awesome---------- -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          
+      <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+          rel="stylesheet"
+        />  
+    
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
       body {
         background: #e0f2fe;
         color: #1e3a8a;
       }
-
-      .profile-card {
+      .edit-card {
         background: #fff;
         border-radius: 15px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -32,101 +33,64 @@
         max-width: 800px;
         margin: 50px auto;
       }
-
-      .profile-header {
+      .edit-card h3 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #1e3a8a;
+      }
+      .form-label {
+        font-weight: bold;
+        color: #1e3a8a;
+      }
+      .form-control {
+        border-radius: 10px;
+        border: 1px solid #1e3a8a;
+        color: #1e3a8a;
+        padding: 10px;
+      }
+      .form-control:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+      }
+      .btn-save,
+      .btn-cancel {
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-weight: bold;
+        margin-right: 10px;
+        transition: 0.3s;
+      }
+      .btn-save {
+        background: #1e3a8a;
+        color: #fff;
+      }
+      .btn-save:hover {
+        background: #3b82f6;
+      }
+      .btn-cancel {
+        background: #f87171;
+        color: #fff;
+      }
+      .btn-cancel:hover {
+        background: #ef4444;
+      }
+      .profile-pic {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
-        border-bottom: 1px solid #cbd5e1;
-        padding-bottom: 15px;
       }
-
-      .profile-header img {
+      .profile-pic img {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         object-fit: cover;
-        margin-right: 20px;
         border: 3px solid #1e3a8a;
-      }
-
-      .profile-header h3 {
-        margin: 0;
-        font-weight: bold;
-      }
-
-      .profile-header p {
-        margin: 0;
-        color: #555;
-      }
-
-      .info-item {
-        margin-bottom: 15px;
-      }
-
-      .info-label {
-        font-weight: bold;
-        color: #1e3a8a;
-      }
-
-      .info-value {
-        color: #555;
-        margin-left: 5px;
-      }
-
-      .btn-edit {
-        background: #1e3a8a;
-        color: #fff;
-        font-weight: bold;
-        border-radius: 25px;
-        padding: 8px 20px;
-        transition: 0.3s;
-      }
-
-      .btn-edit:hover {
-        background: #3b82f6;
-        color: #fff;
-      }
-
-      .btn-back {
-        background: #f87171;
-        color: #fff;
-        font-weight: bold;
-        border-radius: 25px;
-        padding: 8px 20px;
-        transition: 0.3s;
-        margin-left: 10px;
-        text-decoration: none;
-      }
-
-      .btn-back:hover {
-        background: #ef4444;
-        color: #fff;
-      }
-
-      @media (max-width: 576px) {
-        .profile-header {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .profile-header img {
-          margin-bottom: 10px;
-        }
-
-        .text-end {
-          text-align: center !important;
-        }
-
-        .btn-back {
-          margin-left: 0;
-          margin-top: 10px;
-        }
+        margin-right: 20px;
       }
     </style>
   </head>
   <body>
-<!-- ======= HEADER ======= -->
+ <!-- ======= HEADER ======= -->
 <header class="bg-dark-blue">
   <div class="container">
     <nav class="navbar navbar-expand-lg rounded-3" >
@@ -184,7 +148,7 @@
               <a class="nav-link text-white" href="../pages/doctor.html">វេជ្ជបណ្ឌិត</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/contact_us.html">ទំនាក់ទំនង</a>
+              <a class="nav-link text-white" href="../pages/contact_us.html">ទាក់ទងមកពួកយើង</a>
             </li>
           </ul>
         </div>
@@ -240,45 +204,85 @@
 
 </header>
     <div class="container">
-      <div class="profile-card">
-        <div class="profile-header">
+      <div class="edit-card">
+        <h3>កែប្រែពត៌មានផ្ទាល់ខ្លួន</h3>
+
+        <!-- Profile Image -->
+        <div class="profile-pic">
           <img
             id="profileImage"
-            src="../assets/img/user copy.png"
+            src="../assets/img/user.png"
             alt="Profile Picture"
           />
-          <div>
-            <h3 id="profileName">ឈ្មោះ</h3>
-            <p id="profileRole">តួនាទី</p>
-          </div>
+          <input
+            type="file"
+            class="form-control"
+            id="imageInput"
+            style="max-width: 300px"
+          />
         </div>
 
-        <div class="profile-info">
-          <div class="row">
-            <div class="col-md-6 info-item">
-              <span class="info-label">អ៊ីមែល៖</span>
-              <span class="info-value" id="profileEmail"></span>
+        <!-- Edit Form -->
+        <form id="editForm">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">ឈ្មោះ:</label>
+              <input type="text" class="form-control" id="name" />
             </div>
-            <div class="col-md-6 info-item">
-              <span class="info-label">លេខទូរស័ព្ទ៖</span>
-              <span class="info-value" id="profilePhone"></span>
-            </div>
-            <div class="col-md-6 info-item">
-              <span class="info-label">អាសយដ្ឋាន៖</span>
-              <span class="info-value" id="profileAddress"></span>
-            </div>
-            <div class="col-md-6 info-item">
-              <span class="info-label">ថ្ងៃកំណើត៖</span>
-              <span class="info-value" id="profileDob"></span>
+            <div class="col-md-6">
+              <label class="form-label">តួនាទី:</label>
+              <input type="text" class="form-control" id="role" />
             </div>
           </div>
-        </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">អ៊ីមែល:</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">លេខទូរស័ព្ទ:</label>
+              <input type="text" class="form-control" id="phone" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">អាសយដ្ឋាន:</label>
+              <input type="text" class="form-control" id="address" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">ថ្ងៃកំណើត:</label>
+              <input type="date" class="form-control" id="dob" />
+            </div>
+          </div>
 
-        <div class="text-end mt-3">
-          <a href="edit-profile.html" class="btn btn-edit">កែប្រែពត៌មាន</a>
-          <a href="patient-dashboard.html" class="btn btn-back"
-            >ត្រឡប់ទៅផ្ទៃដើម</a
-          >
+          <div class="text-end">
+            <button type="submit" class="btn btn-save">រក្សាទុក</button>
+            <a href="../pages/profile-user.html" class="btn btn-cancel"
+              >បោះបង់</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">ព័ត៌មានដែលអ្នកបានបញ្ចូល</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body" id="modalBody"></div>
+          <div class="modal-footer">
+            <button type="button" id="modalOkBtn" class="btn btn-primary">
+              OK
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -317,19 +321,19 @@
               <h5 class="fw-bold mb-3">តំណភ្ជាប់រហ័ស</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="pages/aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
+                  <a href="../pages/aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
                 </li>
                 <li>
-                  <a href="pages/department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
+                  <a href="../pages/department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
                 </li>
                 <li>
-                  <a href="pages/doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
+                  <a href="../pages/doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
                 </li>
                 <li>
-                  <a href="pages/timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
+                  <a href="../pages/timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
                 </li>
                 <li>
-                  <a href="pages/appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
+                  <a href="../pages/appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
                 </li>
               </ul>
             </div>
@@ -339,7 +343,7 @@
               <h5 class="fw-bold mb-3">សេវាសុខភាព</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
+                  <a hhref="department-detail.html" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
                 </li>
                 <li>
                   <a href="department-detail.html" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
@@ -387,28 +391,86 @@
           </div>
       </section>
     </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-     
-      // Load profile data from localStorage
-      const data = JSON.parse(localStorage.getItem("profileData")) || {
-        name: "អន សម្បត្តិ",
-        role: "អ្នកជំងឺ",
-        email: "sambath@example.com",
-        phone: "+855 12 345 678",
-        address: "ភ្នំពេញ, កម្ពុជា",
-        dob: "2000-01-01",
-        image: "../assets/img/user.png",
-      };
+      // Load saved data
+      window.addEventListener("load", function () {
+        const storedData = JSON.parse(localStorage.getItem("profileData"));
+        if (storedData) {
+          document.getElementById("name").value = storedData.name;
+          document.getElementById("role").value = storedData.role;
+          document.getElementById("email").value = storedData.email;
+          document.getElementById("phone").value = storedData.phone;
+          document.getElementById("address").value = storedData.address;
+          document.getElementById("dob").value = storedData.dob;
+          document.getElementById("profileImage").src = storedData.image;
+        }
+      });
 
-      document.getElementById("profileName").textContent = data.name;
-      document.getElementById("profileRole").textContent = data.role;
-      document.getElementById("profileEmail").textContent = data.email;
-      document.getElementById("profilePhone").textContent = data.phone;
-      document.getElementById("profileAddress").textContent = data.address;
-      document.getElementById("profileDob").textContent = data.dob;
-      document.getElementById("profileImage").src = data.image;
+      // Preview profile image
+      document
+        .getElementById("imageInput")
+        .addEventListener("change", function () {
+          const file = this.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              document.getElementById("profileImage").src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+      // Handle form submit
+      document
+        .getElementById("editForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const role = document.getElementById("role").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const address = document.getElementById("address").value;
+          const dob = document.getElementById("dob").value;
+
+          // Show modal
+          const modalBody = document.getElementById("modalBody");
+          modalBody.innerHTML = `
+        <p><strong>ឈ្មោះ:</strong> ${name}</p>
+        <p><strong>តួនាទី:</strong> ${role}</p>
+        <p><strong>អ៊ីមែល:</strong> ${email}</p>
+        <p><strong>លេខទូរស័ព្ទ:</strong> ${phone}</p>
+        <p><strong>អាសយដ្ឋាន:</strong> ${address}</p>
+        <p><strong>ថ្ងៃកំណើត:</strong> ${dob}</p>
+      `;
+
+          const infoModal = new bootstrap.Modal(
+            document.getElementById("infoModal")
+          );
+          infoModal.show();
+
+          document.getElementById("modalOkBtn").onclick = function () {
+            // Save to localStorage
+            const userData = {
+              name,
+              role,
+              email,
+              phone,
+              address,
+              dob,
+              image: document.getElementById("profileImage").src,
+            };
+            localStorage.setItem("profileData", JSON.stringify(userData));
+            infoModal.hide();
+
+            // Delay redirect slightly so modal closes smoothly
+            setTimeout(() => {
+              window.location.href = "../pages/profile-user.html";
+            }, 200);
+          };
+        });
     </script>
   </body>
 </html>
