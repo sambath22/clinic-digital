@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="km">
   <head>
@@ -5,25 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clinic Digital - ចុះឈ្មោះ</title>
     <link href="../assets/img/logo1.png" rel="icon" />
-
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-
-    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Hanuman:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-
     <style>
       body {
         font-family: "Hanuman", serif;
@@ -34,7 +28,6 @@
         min-height: 100vh;
         margin: 0;
       }
-
       .signup-card {
         display: flex;
         max-width: 900px;
@@ -44,7 +37,6 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         background: #fff;
       }
-
       .signup-left {
         background: linear-gradient(120deg, #4a6fa5 0%, #2c4c7a 100%);
         color: #fff;
@@ -56,34 +48,28 @@
         align-items: center;
         text-align: center;
       }
-
       .signup-left h1 {
         font-size: 36px;
         margin-bottom: 10px;
         font-weight: 700;
       }
-
       .signup-left p {
         font-size: 18px;
         opacity: 0.9;
       }
-
       .signup-left img {
         max-width: 200px;
         margin-top: 20px;
       }
-
       .signup-right {
         flex: 1;
         padding: 40px;
       }
-
       .signup-right h3 {
         color: #3498db;
         margin-bottom: 20px;
         font-weight: 700;
       }
-
       .form-control {
         border-radius: 50px;
         padding: 12px 20px;
@@ -91,12 +77,10 @@
         margin-bottom: 15px;
         transition: all 0.3s;
       }
-
       .form-control:focus {
         border-color: #3498db;
         box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
       }
-
       .btn-signup {
         width: 100%;
         padding: 12px;
@@ -107,42 +91,11 @@
         font-weight: 600;
         font-size: 16px;
         transition: all 0.3s;
+        cursor: pointer;
       }
-
       .btn-signup:hover {
         transform: translateY(-2px);
       }
-
-      .text-center a {
-        color: #3498db;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .text-center a:hover {
-        text-decoration: underline;
-      }
-
-      .divider {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: 20px 0;
-      }
-
-      .divider::before,
-      .divider::after {
-        content: "";
-        flex: 1;
-        border-bottom: 1px solid #ddd;
-      }
-
-      .divider span {
-        padding: 0 10px;
-        color: #7f8c8d;
-        font-size: 14px;
-      }
-
       .btn-google {
         width: 100%;
         padding: 10px;
@@ -155,23 +108,52 @@
         background: #fff;
         color: #757575;
         transition: all 0.3s;
+        cursor: pointer;
       }
-
       .btn-google img {
         width: 20px;
         margin-right: 10px;
       }
-
       .btn-google:hover {
         background: #f5f5f5;
         transform: translateY(-2px);
+      }
+      .divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #ddd;
+      }
+      .divider span {
+        padding: 0 10px;
+        color: #7f8c8d;
+        font-size: 14px;
+      }
+      .error-message {
+        color: red;
+        font-size: 13px;
+        margin-bottom: 10px;
+        display: none;
+      }
+      .text-center a {
+        color: #3498db;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .text-center a:hover {
+        text-decoration: underline;
       }
 
       @media (max-width: 768px) {
         .signup-card {
           flex-direction: column;
         }
-
         .signup-left,
         .signup-right {
           padding: 30px;
@@ -179,10 +161,8 @@
       }
     </style>
   </head>
-
   <body>
     <div class="signup-card">
-      <!-- Left Panel -->
       <div class="signup-left">
         <h1>Clinic Digital</h1>
         <p>ចូលរួមជាមួយពួកយើងដើម្បីទទួលបានសេវាថែទាំប្រកបដោយឌីជីថល</p>
@@ -192,93 +172,142 @@
         />
       </div>
 
-      <!-- Right Panel -->
       <div class="signup-right">
         <h3>បង្កើតគណនីអ្នកជម្ងឺ</h3>
+        <form id="signupForm" novalidate>
+          <input
+            type="text"
+            id="firstName"
+            class="form-control"
+            placeholder="នាម"
+            required
+          />
+          <div class="error-message" id="firstNameError">សូមបញ្ចូលនាម</div>
 
-        <form id="signupForm">
-          <div class="mb-3">
-            <input
-              type="text"
-              id="firstName"
-              class="form-control"
-              placeholder="នាម"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="text"
-              id="lastName"
-              class="form-control"
-              placeholder="នាមត្រកូល"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="email"
-              id="email"
-              class="form-control"
-              placeholder="អ៊ីមែល"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="password"
-              id="password"
-              class="form-control"
-              placeholder="ពាក្យសម្ងាត់"
-              required
-            />
+          <input
+            type="text"
+            id="lastName"
+            class="form-control"
+            placeholder="នាមត្រកូល"
+            required
+          />
+          <div class="error-message" id="lastNameError">សូមបញ្ចូលនាមត្រកូល</div>
+
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            placeholder="អ៊ីមែល"
+            required
+          />
+          <div class="error-message" id="emailError">
+            អាស័យដ្ឋានអ៊ីមែលមិនត្រឹមត្រូវ
           </div>
 
-          <a href="../pages/patient-login.html" class="btn btn-signup mb-3"
-            >បង្កើតគណនី</a
-          >
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="ពាក្យសម្ងាត់"
+            required
+          />
+          <div class="error-message" id="passwordError">
+            ពាក្យសម្ងាត់ត្រូវមានយ៉ាងតិច 6 តួអក្សរ
+          </div>
+
+          <input
+            type="password"
+            id="confirmPassword"
+            class="form-control"
+            placeholder="បញ្ជាក់ពាក្យសម្ងាត់"
+            required
+          />
+          <div class="error-message" id="confirmPasswordError">
+            ពាក្យសម្ងាត់មិនត្រូវគ្នា
+          </div>
+
+          <button type="submit" class="btn-signup mb-3">បង្កើតគណនី</button>
 
           <div class="divider"><span>ឬចុះឈ្មោះដោយប្រើ</span></div>
 
-          <a
-            href="../pages/homepage.html"
-            class="btn btn-google mb-3 d-flex align-items-center justify-content-center"
+          <div
+            class="btn-google mb-3 d-flex align-items-center justify-content-center"
           >
             <img
               src="../assets/img/signup-img/Google__G__logo.svg.png"
               alt="Google Logo"
-              style="width: 20px; margin-right: 10px"
             />
             Google
-          </a>
+          </div>
 
-          <div class="text-center">មានគណនីរួចហើយ? <a href="#">ចូលគណនី</a></div>
+          <div class="text-center">
+            មានគណនីរួចហើយ? <a href="../pages/patient-login.html">ចូលគណនី</a>
+          </div>
         </form>
       </div>
     </div>
 
     <script>
       const signupForm = document.getElementById("signupForm");
-      const signupBtn = document.querySelector(".btn-signup");
 
       signupForm.addEventListener("submit", function (e) {
         e.preventDefault();
-        const termsAgree = document.getElementById("termsAgree").checked;
+        const firstName = document.getElementById("firstName");
+        const lastName = document.getElementById("lastName");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
 
-        if (termsAgree) {
-          signupBtn.innerHTML =
-            '<i class="fas fa-spinner fa-spin"></i> កំពុងបង្កើតគណនី...';
-          signupBtn.disabled = true;
-          setTimeout(() => {
-            alert("គណនីត្រូវបានបង្កើតដោយជោគជ័យ!");
-            signupBtn.innerHTML = "បង្កើតគណនី";
-            signupBtn.disabled = false;
-          }, 1500);
+        let valid = true;
+
+        function showError(input, errorId, message) {
+          const errorEl = document.getElementById(errorId);
+          errorEl.textContent = message;
+          errorEl.style.display = "block";
+          input.style.borderColor = "red";
+          valid = false;
+        }
+
+        function hideError(input, errorId) {
+          const errorEl = document.getElementById(errorId);
+          errorEl.style.display = "none";
+          input.style.borderColor = "#ddd";
+        }
+
+        if (firstName.value.trim() === "")
+          showError(firstName, "firstNameError", "សូមបញ្ចូលនាម");
+        else hideError(firstName, "firstNameError");
+        if (lastName.value.trim() === "")
+          showError(lastName, "lastNameError", "សូមបញ្ចូលនាមត្រកូល");
+        else hideError(lastName, "lastNameError");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.value.trim() === "" || !emailPattern.test(email.value.trim()))
+          showError(email, "emailError", "អាស័យដ្ឋានអ៊ីមែលមិនត្រឹមត្រូវ");
+        else hideError(email, "emailError");
+        if (password.value.trim().length < 6)
+          showError(
+            password,
+            "passwordError",
+            "ពាក្យសម្ងាត់ត្រូវមានយ៉ាងតិច 6 តួអក្សរ"
+          );
+        else hideError(password, "passwordError");
+        if (confirmPassword.value.trim() !== password.value.trim())
+          showError(
+            confirmPassword,
+            "confirmPasswordError",
+            "ពាក្យសម្ងាត់មិនត្រូវគ្នា"
+          );
+        else hideError(confirmPassword, "confirmPasswordError");
+
+        if (valid) {
+          alert("គណនីត្រូវបានបង្កើតដោយជោគជ័យ!");
+          window.location.href = "../pages/patient-login.html"; // normal signup → login page
         }
       });
 
       document.querySelector(".btn-google").addEventListener("click", () => {
-        alert("ការចុះឈ្មោះដោយ Google នឹងត្រូវបានចាប់ផ្តើមនៅទីនេះ។");
+        alert("ការចុះឈ្មោះដោយ Google បានជោគជ័យ!");
+        window.location.href = "../pages/homepage.html"; // Google signup → homepage
       });
     </script>
   </body>
