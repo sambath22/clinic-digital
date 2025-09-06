@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="km">
   <head>
@@ -6,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clinic Digital - ប្រព័ន្ធគ្រប់គ្រងមន្ទីរពេទ្យ</title>
     <link href="../assets/img/logo1.png" rel="icon" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -24,15 +24,15 @@
       }
       body {
         display: flex;
-        min-height: 100vh;
         justify-content: center;
         align-items: center;
+        min-height: 100vh;
         padding: 20px;
         position: relative;
         overflow: hidden;
         background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
       }
-      /* Animated background shapes */
+      /* Animated background */
       body::before {
         content: "";
         position: absolute;
@@ -79,8 +79,8 @@
 
       .container {
         display: flex;
-        width: 100%;
         max-width: 1200px;
+        width: 100%;
         background: white;
         border-radius: 15px;
         overflow: hidden;
@@ -141,6 +141,7 @@
 
       .form-group {
         margin-bottom: 24px;
+        position: relative;
       }
       label {
         display: block;
@@ -173,6 +174,12 @@
         transform: translateY(-50%);
         color: #a0aec0;
         cursor: pointer;
+      }
+      .error-message {
+        color: red;
+        font-size: 13px;
+        margin-top: 5px;
+        display: none;
       }
 
       .forgot-password {
@@ -223,7 +230,7 @@
         font-size: 32px;
         margin-bottom: 24px;
       }
-      .right-panel p {
+      .right-panel p.description {
         font-size: 18px;
         line-height: 1.6;
         opacity: 0.9;
@@ -294,23 +301,34 @@
           សូមបញ្ចូលព័ត៌មានគណនីរបស់អ្នក ដើម្បីចូលក្នុងផ្ទាំងគ្រប់គ្រង
         </p>
 
-        <form>
+        <form id="login-form" novalidate>
           <div class="form-group">
             <label for="email">អាស័យដ្ឋានអ៊ីមែល</label>
             <input
               type="email"
               id="email"
               placeholder="example@clinicdigital.com"
+              required
             />
+            <div class="error-message" id="email-error">
+              អាស័យដ្ឋានអ៊ីមែលមិនត្រឹមត្រូវ។
+            </div>
           </div>
-
           <div class="form-group">
             <label for="password">ពាក្យសម្ងាត់</label>
             <div class="password-container">
-              <input type="password" id="password" placeholder="••••••••" />
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
               <span class="toggle-password" id="togglePassword"
                 ><i class="far fa-eye"></i
               ></span>
+            </div>
+            <div class="error-message" id="password-error">
+              ពាក្យសម្ងាត់ត្រូវមានយ៉ាងតិច 6 តួអក្សរ។
             </div>
             <a
               href="../pages/patient-forgot-password.html"
@@ -318,9 +336,7 @@
               >ភ្លេចពាក្យសម្ងាត់?</a
             >
           </div>
-
-          <button type="submit" class="btn" id="btn-login">ចូលក្នុងគណនី</button>
-
+          <button type="submit" class="btn">ចូលក្នុងគណនី</button>
           <div class="signup-link">
             មិនទាន់មានគណនី?
             <a href="../pages/patient-signup.html">បង្កើតគណនី</a>
@@ -330,11 +346,10 @@
 
       <div class="right-panel">
         <h2>សូមស្វាគមន៍មកកាន់ Clinic Digital</h2>
-        <p>ប្រព័ន្ធគ្រប់គ្រងមន្ទីរពេទ្យ</p>
-
         <p class="description">
-          ប្រព័ន្ធគ្រប់គ្រងមន្ទីរពេទ្យឌីជីថលដែលមានប្រសិទ្ធភាពជាមួយនឹងការគ្រប់គ្រងកំណត់ត្រាអ្នកជម្ងឺកណ្តាល,
-          ការកំណត់ពេលណាត់ជួប និងការគ្រប់គ្រងសារពើភ័ណ្ឌវេជ្ជសាស្ត្រ។
+          ប្រព័ន្ធគ្រប់គ្រងមន្ទីរពេទ្យឌីជីថលដែលមានប្រសិទ្ធភាព
+          ជាមួយការគ្រប់គ្រងកំណត់ត្រាអ្នកជម្ងឺ ការកំណត់ពេលណាត់ជួប
+          និងការគ្រប់គ្រងសារពើភ័ណ្ឌវេជ្ជសាស្ត្រ។
         </p>
 
         <div class="features">
@@ -368,30 +383,49 @@
     </div>
 
     <script>
-      // Toggle password visibility
-      document
-        .getElementById("togglePassword")
-        .addEventListener("click", function () {
-          const passwordInput = document.getElementById("password");
-          const icon = this.querySelector("i");
-          if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            icon.classList.remove("fa-eye");
-            icon.classList.add("fa-eye-slash");
-          } else {
-            passwordInput.type = "password";
-            icon.classList.remove("fa-eye-slash");
-            icon.classList.add("fa-eye");
-          }
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("login-form");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+        const emailError = document.getElementById("email-error");
+        const passwordError = document.getElementById("password-error");
+
+        // Toggle password visibility
+        togglePassword.addEventListener("click", () => {
+          const type = password.type === "password" ? "text" : "password";
+          password.type = type;
+          togglePassword.innerHTML =
+            type === "password"
+              ? '<i class="far fa-eye"></i>'
+              : '<i class="far fa-eye-slash"></i>';
         });
 
-      // Redirect to index2.html on login click
-      document
-        .getElementById("btn-login")
-        .addEventListener("click", function (e) {
+        // Form submission with validation
+        form.addEventListener("submit", (e) => {
           e.preventDefault();
-          window.location.href = "../pages/index2.html";
+          let valid = true;
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          // Email validation
+          if (!emailPattern.test(email.value.trim())) {
+            emailError.style.display = "block";
+            valid = false;
+          } else emailError.style.display = "none";
+
+          // Password validation
+          if (password.value.trim().length < 6) {
+            passwordError.style.display = "block";
+            valid = false;
+          } else passwordError.style.display = "none";
+
+          // If valid, show alert then redirect
+          if (valid) {
+            alert("ចូលក្នុងគណនីដោយជោគជ័យ!");
+            window.location.href = "../pages/homepage.html"; // redirect to homepage
+          }
         });
+      });
     </script>
   </body>
 </html>
