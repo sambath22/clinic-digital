@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>កាលវិភាគ</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/patient-dashboard.css" />
+
+    <style>
+      /* Main content */
+      .main {
+        margin-left: 260px;
+        padding: 40px;
+      }
+
+      .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .main {
+        margin-left: 260px;
+        padding: 40px;
+      }
+
+      .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .btn-primary {
+        background-color: #193cb8;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #121f77;
+      }
+
+      /* Calendar Table */
+      .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .calendar-table th,
+      .calendar-table td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #e5e7eb;
+      }
+
+      .calendar-table th {
+        background-color: #193cb8;
+        color: #fff;
+      }
+
+      .event {
+        background-color: #193cb8;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar toggle button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+      <i class="bi bi-list"></i>
+    </button>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>គ្លីនិក</h2>
+      <div>
+        <a href="#" class="active"
+          ><i class="bi bi-calendar-fill"></i>កាលវិភាគ</a
+        >
+        <a href="#"><i class="bi bi-people-fill"></i>បុគ្គលិក</a>
+        <a href="#"><i class="bi bi-person-fill"></i>អ្នកជំងឺ</a>
+        <a href="#"
+          ><i class="bi bi-calendar-check-fill"></i>ការណាត់ជួបដែលបានកំណត់</a
+        >
+        <a href="#"><i class="bi bi-bar-chart-fill"></i>ស្ថិតិ</a>
+        <a href="#"><i class="bi bi-file-earmark-text-fill"></i>របាយការណ៍</a>
+        <a href="#"><i class="bi bi-currency-dollar"></i>តម្លៃ</a>
+        <a href="#"><i class="bi bi-building"></i>បន្ទប់ពេទ្យ</a>
+      </div>
+      <div class="upgrade">
+        <p>ធ្វើការកែលម្អទៅ PRO</p>
+        <button>UPDATE TO PRO</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <div class="main-header">
+        <h2>កាលវិភាគ</h2>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#appointmentModal"
+        >
+          បន្ថែមការណាត់ជួបថ្មី
+        </button>
+      </div>
+
+      <!-- Calendar Table -->
+      <table class="calendar-table">
+        <thead>
+          <tr>
+            <th>ថ្ងៃ</th>
+            <th>ពេលព្រឹក</th>
+            <th>ពេលថ្ងៃ</th>
+            <th>ពេលល្ងាច</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ចន្ទ</td>
+            <td><span class="event">ពិនិត្យធ្មេញ - សម្បត្តិ</span></td>
+            <td>-</td>
+            <td><span class="event">ការព្យាបាល - ម៉ាក់ស៍</span></td>
+          </tr>
+          <tr>
+            <td>អង្គារ</td>
+            <td>-</td>
+            <td><span class="event">ពិនិត្យសុខភាព - សុខា</span></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>ពុធ</td>
+            <td><span class="event">វេជ្ជបណ្ឌិតប្រចាំការិយាល័យ</span></td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>ព្រហស្បតិ៍</td>
+            <td>-</td>
+            <td><span class="event">ពិនិត្យធ្មេញ - សម្បត្តិ</span></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>សុក្រ</td>
+            <td>-</td>
+            <td>-</td>
+            <td><span class="event">ការព្យាបាល - ម៉ាក់ស៍</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Static Backdrop Modal -->
+    <div
+      class="modal fade"
+      id="appointmentModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="appointmentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="appointmentModalLabel">
+              បន្ថែមការណាត់ជួបថ្មី
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="appointmentDate" class="form-label"
+                  >ថ្ងៃ និងម៉ោង</label
+                >
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  id="appointmentDate"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="service" class="form-label">សេវាកម្ម</label>
+                <input type="text" class="form-control" id="service" />
+              </div>
+              <div class="mb-3">
+                <label for="doctor" class="form-label">វេជ្ជបណ្ឌិត</label>
+                <input type="text" class="form-control" id="doctor" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              បិទ
+            </button>
+            <button type="button" class="btn btn-primary">រក្សាទុក</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

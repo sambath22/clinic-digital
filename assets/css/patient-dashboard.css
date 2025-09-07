@@ -1,0 +1,272 @@
+:root {
+  --side-bar-color: #1c398e;
+}
+body {
+  background-color: #f4f5fa;
+  margin: 0;
+  font-family: "Kantumruy Pro", sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: var(--side-bar-color);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  font-weight: bold;
+  margin: 50px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.sidebar .upgrade {
+  margin-top: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sidebar .upgrade button {
+  background: #fff;
+  color: #193cb8;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar .upgrade button:hover {
+  background: #e0e7ff;
+}
+
+/* Sidebar toggle for mobile */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #193cb8;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 900;
+  transition: 0.3s;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* Main content */
+.main {
+  margin-left: 260px;
+  padding: 40px;
+  transition: margin-left 0.3s;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* font-weight: bold; */
+  margin: 50px 0px;
+  flex-wrap: wrap;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.profile-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #193cb8;
+}
+
+.profile-info h3 {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.profile-info p {
+  margin: 5px 0 10px;
+  color: #6b7280;
+}
+
+/* Card Sections */
+.card-section {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-section h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-section .info-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  width: 45%;
+  margin-bottom: 10px;
+}
+
+.info-item span.label {
+  font-weight: bold;
+  color: #193cb8;
+}
+
+.info-item span.value {
+  margin-left: 5px;
+  color: #374151;
+}
+
+/* Table style for visits */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.visits-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 600px;
+}
+
+.visits-table th,
+.visits-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.visits-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.badge-scheduled {
+  background-color: #193cb8;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+/* Buttons */
+.btn-edit,
+.btn-download {
+  background-color: #193cb8;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-edit:hover,
+.btn-download:hover {
+  background-color: #121f77;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .main {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .sidebar {
+    left: -260px;
+  }
+  .sidebar.show {
+    left: 0;
+  }
+  .sidebar-toggle {
+    display: block;
+  }
+  .info-item {
+    width: 100%;
+  }
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-card img {
+    margin-bottom: 15px;
+  }
+}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ទំព័រដើម</title>
+  <title>Clinic Digital</title>
       
   <link href="../assets/img/logo1.png" rel="icon" />
   <!-- bootrap icon -->
@@ -91,37 +91,38 @@
             </li>
           </ul>
 
-          <!-- Right Side (Messages + Notifications + Profile) -->
-          <div class="d-flex align-items-center">
-            <!-- Messages -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="messagesDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-envelope-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
-              </ul>
-            </div>
+<!-- Right Side (Telegram + Notifications + Profile) -->
+<div class="d-flex align-items-center">
 
-            <!-- Notifications -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="bi bi-bell-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Notification 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 3</a></li>
-              </ul>
-            </div>
+  <!-- Telegram Icon Link -->
+<a 
+  class="text-white fs-4 me-1"
+  href="https://t.me/clinic_digital"
+  target="_blank"
+  title="Join us on Telegram"
+  style="color: #0088cc;"
+>
+  <i class="fa-brands fa-telegram"></i>
+</a>
+
+
+  <!-- Notifications Icon (with badge + dropdown) -->
+  <div class="dropdown me-1">
+   
+   
+  <!-- Notification Icon -->
+      <a 
+        href="../pages/notification.html" 
+        class="text-white fs-4 me-3"
+        title="View Notifications"
+      >
+        <i class="fa-solid fa-bell"></i>
+      </a>
+
+
+   
+  </div>
+
 
             <!-- Profile -->
             <div class="dropdown">
@@ -131,8 +132,7 @@
                 សំបាត់
               </a>
               <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
-                <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
+                <li><a class="dropdown-item text-white " href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
                 <li><hr class="dropdown-divider bg-white"></li>
                 <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
               </ul>
@@ -324,95 +324,85 @@
     <!-- ============ TESTIMONIAL[END]============= -->
     <!-- ===========DOCTOR-SECTION[START]========= -->
     <section class="doctor py-5 bg-light">
-      <div class="container text-center">
-        <span>ព័ត៌មាន</span>
-        <h2>វេជ្ជបណ្ឌិត</h2>
-        <div class="row g-4">
-          <!-- Doctor 1 -->
-   
-          <div class="col-lg-4 col-md-6">
-             <div class="card doctor-card shadow-sm border-0 h-100">
-              <div class="doctor-img-wrapper position-relative">
-                <a href=""></a>
-                <img src="../assets/img/doctor/doctor_1.png" alt="Dr. James Lee" />
-                <div
-                  class="doctor-social d-flex justify-content-center align-items-center"
-                >
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">
-                  <a href="../pages/doctor_detail.html">វេជ្ជបណ្ឌិត James Lee, MD</a>
-                </h5>
-                <p>ប្រធានគ្រូពេទ្យបេះដូង</p>
+  <div class="container text-center">
+    <span>ព័ត៌មាន</span>
+    <h2>វេជ្ជបណ្ឌិត</h2>
+    <div class="row g-4">
+      
+      <!-- Doctor 1 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="../pages/doctor_detail.html" class="text-decoration-none text-dark">
+          <div class="card doctor-card shadow-sm border-0 h-100">
+            <div class="doctor-img-wrapper position-relative">
+              <img src="../assets/img/doctor/doctor_1.png" alt="Dr. James Lee" />
+              <div class="doctor-social d-flex justify-content-center align-items-center">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
               </div>
             </div>
-          </div>
-
-          <!-- Doctor 2 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card doctor-card shadow-sm border-0 h-100">
-              <div class="doctor-img-wrapper position-relative">
-                <img
-                  src="../assets/img/doctor/doctor_2.png"
-                  alt="Dr. Anna Smith"
-                />
-                <div
-                  class="doctor-social d-flex justify-content-center align-items-center"
-                >
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">
-                  <a href="../pages/doctor_detail.html">វេជ្ជបណ្ឌិត Anna Smith, MD</a>
-                </h5>
-                <p>ប្រធានផ្នែកសរសៃប្រសាទ</p>
-              </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">វេជ្ជបណ្ឌិត James Lee, MD</h5>
+              <p>ប្រធានគ្រូពេទ្យបេះដូង</p>
             </div>
           </div>
-
-          <!-- Doctor 3 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card doctor-card shadow-sm border-0 h-100">
-              <div class="doctor-img-wrapper position-relative">
-                <img
-                  src="../assets/img/doctor/doctor_3.png"
-                  alt="Dr. Robert Kim"
-                />
-                <div
-                  class="doctor-social d-flex justify-content-center align-items-center"
-                >
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">
-                  <a href="../pages/doctor_detail.html">វេជ្ជបណ្ឌិត Robert Kim, MD</a>
-                </h5>
-                <p>ប្រធានពេទ្យកុមារ</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </a>
       </div>
-    </section>
+
+      <!-- Doctor 2 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="../pages/doctor_detail.html" class="text-decoration-none text-dark">
+          <div class="card doctor-card shadow-sm border-0 h-100">
+            <div class="doctor-img-wrapper position-relative">
+              <img src="../assets/img/doctor/doctor_2.png" alt="Dr. Anna Smith" />
+              <div class="doctor-social d-flex justify-content-center align-items-center">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">វេជ្ជបណ្ឌិត Anna Smith, MD</h5>
+              <p>ប្រធានផ្នែកសរសៃប្រសាទ</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Doctor 3 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="../pages/doctor_detail.html" class="text-decoration-none text-dark">
+          <div class="card doctor-card shadow-sm border-0 h-100">
+            <div class="doctor-img-wrapper position-relative">
+              <img src="../assets/img/doctor/doctor_3.png" alt="Dr. Robert Kim" />
+              <div class="doctor-social d-flex justify-content-center align-items-center">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">វេជ្ជបណ្ឌិត Robert Kim, MD</h5>
+              <p>ប្រធានពេទ្យកុមារ</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- ===========DOCTOR-SECTION[END]========= -->
     <!-- ===============DEPARTMENT [START]================ -->
 
-    <section class="departments py-5" id="department">
+    
+     <section class="departments py-5" id="department">
   <div class="container">
     <h2 class="text-center mb-5 fw-bold title">ឯកទេសព្យាបាល</h2>
     <div class="row g-4 justify-content-center">
-
+      
       <!-- Department 1 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
         <a href="../pages/department-detail.html" class="text-decoration-none">
@@ -463,9 +453,19 @@
         </a>
       </div>
 
+      <!-- Department 6 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+        <a href="../pages/department-detail.html" class="text-decoration-none">
+          <div class="department-card text-center">
+            <img src="../assets/img/department6.svg" alt="ចិត្តសាស្ត្រ" class="img-fluid" />
+            <h5>ចិត្តសាស្ត្រ</h5>
+          </div>
+        </a>
+      </div>
+
     </div>
   </div>
-    </section>
+  </section>
 
     <!-- ===============DEPARTMENT [END]================ -->
 
@@ -865,137 +865,89 @@
     <!-- ===== FAQ SECTION [END]==== -->
      <!-- Contact Section -->
       <section id="contact" class="contact section my-5">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <!-- <h2 class="text-center fw-bold py-4">ទំនាក់ទំនងមកពួកយើង</h2> -->
-         
-        </div>
-        
-        <!-- End Section Title -->
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold py-4">ទំនាក់ទំនងមកពួកយើង</h2>
+    <p>សូមបំពេញព័ត៌មានខាងក្រោម ហើយយើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ។</p>
+  </div>
 
-        <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
-          <iframe
-            style="border: 0; width: 100%; height: 270px"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
-            frameborder="0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <!-- End Google Maps -->
+  <!-- Google Maps -->
+  <div class="mb-5">
+    <iframe
+      style="border:0; width:100%; height:270px; border-radius:10px;"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+      frameborder="0"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-lg-4">
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Location</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div>
-              <!-- End Info Item -->
-
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div>
-              <!-- End Info Item -->
-
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div>
-              <!-- End Info Item -->
-            </div>
-
-            <div class="col-lg-8">
-              <form
-                action="forms/contact.php"
-                method="post"
-                class="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div class="row gy-4">
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Your Name"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      placeholder="Your Email"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="subject"
-                      placeholder="Subject"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      rows="6"
-                      placeholder="Message"
-                      required=""
-                    ></textarea>
-                  </div>
-
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-
-                    <button type="submit">Send Message</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!-- End Contact Form -->
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <div class="d-flex align-items-start mb-4">
+          <i class="bi bi-geo-alt fs-3 me-3"></i>
+          <div>
+            <h5>ទីតាំង</h5>
+            <p>A108 ផ្លូវ Adam, New York, NY 535022</p>
           </div>
         </div>
-      </section>
+        <div class="d-flex align-items-start mb-4">
+          <i class="bi bi-telephone fs-3 me-3"></i>
+          <div>
+            <h5>ទូរស័ព្ទ</h5>
+            <p>+1 5589 55488 55</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-start mb-4">
+          <i class="bi bi-envelope fs-3 me-3"></i>
+          <div>
+            <h5>អ៊ីមែល</h5>
+            <p>info@example.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <form id="contactForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control rounded-3" placeholder="ឈ្មោះរបស់អ្នក" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" name="email" class="form-control rounded-3" placeholder="អ៊ីមែលរបស់អ្នក" required>
+            </div>
+            <div class="col-md-12">
+              <select name="subject" class="form-control rounded-3" required>
+                <option value="" disabled selected>ជ្រើសរើសប្រធានបទ</option>
+                <option value="booking">ការកក់ពិនិត្យ</option>
+                <option value="price">សួរអំពីតម្លៃ</option>
+                <option value="service">ព័ត៌មានអំពីសេវា</option>
+                <option value="other">ផ្សេងៗ</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <textarea name="message" class="form-control rounded-3" rows="5" placeholder="សារ" required></textarea>
+            </div>
+            <div class="col-md-12 text-center">
+              <div class="loading mb-2" style="display:none;">កំពុងផ្ទុក...</div>
+              <div class="error-message text-danger mb-2"></div>
+              <div class="sent-message text-success mb-2" style="display:none;">សាររបស់អ្នកត្រូវបានផ្ញើ។ សូមអរគុណ!</div>
+
+              <button type="submit" class="btn btn-primary rounded-3 px-4 py-2">ផ្ញើសារ</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
       <!-- /Contact Section -->
 </main>
   
+    <!-- ====================Footer=============================== -->
     <!-- ====================Footer=============================== -->
     <footer class="footer pt-3 text-white">
 
@@ -1034,19 +986,19 @@
               <h5 class="fw-bold mb-3">តំណភ្ជាប់រហ័ស</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="pages/aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
+                  <a href="../pages/aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
                 </li>
                 <li>
-                  <a href="pages/department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
+                  <a href="../pages/department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
                 </li>
                 <li>
-                  <a href="pages/doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
+                  <a href="../pages/doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
                 </li>
                 <li>
-                  <a href="pages/timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
+                  <a href="../pages/timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
                 </li>
                 <li>
-                  <a href="pages/appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
+                  <a href="../pages/appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
                 </li>
               </ul>
             </div>
@@ -1056,19 +1008,19 @@
               <h5 class="fw-bold mb-3">សេវាសុខភាព</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="#" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
+                  <a href="../pages/department-detail.html" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
                 </li>
                 <li>
-                  <a href="#" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
+                  <a href="../pages/department-detail.html" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
                 </li>
                 <li>
-                  <a href="#" class="f-link"><i class="fas fa-heart me-2"></i>រោគបេះដូង</a>
+                  <a href="../pages/department-detail.html" class="f-link"><i class="fas fa-heart me-2"></i>រោគបេះដូង</a>
                 </li>
                 <li>
-                  <a href="#" class="f-link"><i class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
+                  <a href="../pages/department-detail.html" class="f-link"><i class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
                 </li>
                 <li>
-                  <a href="#" class="f-link"><i class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
+                  <a href="../pages/department-detail.html" class="f-link"><i class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
                 </li>
               </ul>
             </div>
@@ -1104,32 +1056,49 @@
           </div>
       </section>
     </footer>
-
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!-- swipper -->
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
- 
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      768: { // tablet
-        slidesPerView: 2,
-      },
-      1200: { // desktop
-        slidesPerView: 3,
-      }
-    }
-  });
+     <script>
+        document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
+          const form = this;
+          const loading = form.querySelector(".loading");
+          const errorMsg = form.querySelector(".error-message");
+          const sentMsg = form.querySelector(".sent-message");
 
+          // Reset messages
+          loading.style.display = "block";
+          errorMsg.innerHTML = "";
+          sentMsg.style.display = "none";
+
+          // Simulate sending with 1.5s delay
+          setTimeout(() => {
+            loading.style.display = "none";
+            sentMsg.style.display = "block";
+            form.reset();
+          }, 1500);
+        });
+      // swipper 
+       var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+
+      // Custom buttons control
+      document.querySelector(".btn-prev").addEventListener("click", () => swiper.slidePrev());
+      document.querySelector(".btn-next").addEventListener("click", () => swiper.slideNext());
+
+      // ================swipper[END]=====================
       // Header scroll class
 
       window.addEventListener("scroll", function () {
@@ -1226,6 +1195,31 @@
           shape.style.transform = `translate(${xMove}px, ${yMove}px)`;
         });
       });
+
+      // form contact us after click
+  document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = this;
+          const loading = form.querySelector(".loading");
+          const errorMsg = form.querySelector(".error-message");
+          const sentMsg = form.querySelector(".sent-message");
+
+          // Reset messages
+          loading.style.display = "block";
+          errorMsg.innerHTML = "";
+          sentMsg.style.display = "none";
+
+          // Simulate sending with 1.5s delay
+          setTimeout(() => {
+            loading.style.display = "none";
+            sentMsg.style.display = "block";
+            form.reset();
+          }, 1500);
+        });
+
 
     </script>
   </body>

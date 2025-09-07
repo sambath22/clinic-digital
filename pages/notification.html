@@ -3,181 +3,313 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>សារជូនដំណឹង</title>
-    <link href="../assets/img/logo1.png" rel="icon" />
+    <title>សារ / ជូនដំណឹង</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Khmer Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Hanuman:wght@300;400;700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../assets/css/patient-dashboard.css" />
 
     <style>
       body {
         font-family: "Hanuman", serif;
-        background: #f4f7fb;
+        background: #f5f7fa;
         margin: 0;
       }
-      .sidebar {
-        width: 250px;
-        background: #2c4c7a;
-        min-height: 100vh;
-        color: #fff;
-        position: fixed;
-        padding-top: 40px;
-      }
-      .sidebar h2 {
-        text-align: center;
-        margin-bottom: 30px;
-        font-weight: 700;
-      }
-      .sidebar a {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 12px 20px;
-        margin: 5px 0;
-        border-radius: 8px;
-        transition: 0.3s;
-      }
-      .sidebar a:hover {
-        background: #1b2e4b;
-      }
-      .main-content {
+
+      /* Main content */
+      .main {
         margin-left: 250px;
-        padding: 40px;
+        padding: 40px 30px;
       }
-      .dashboard-header {
+      .main-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
       }
-      .dashboard-header h1 {
-        font-size: 28px;
-        font-weight: 700;
+      .main-header h2 {
         color: #2c4c7a;
       }
       .notification-card {
+        background: #fff;
         border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 20px;
         margin-bottom: 20px;
         transition: 0.3s;
       }
       .notification-card:hover {
-        transform: translateY(-5px);
-      }
-      .notification-card .card-header {
-        background: #3498db;
-        color: #fff;
-        font-weight: 600;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       }
       .notification-item {
         display: flex;
         align-items: center;
-        padding: 15px;
+        padding: 15px 0;
         border-bottom: 1px solid #eee;
       }
       .notification-item:last-child {
         border-bottom: none;
       }
       .notification-icon {
-        width: 40px;
-        height: 40px;
-        background: #3498db;
-        color: #fff;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 15px;
+        font-size: 22px;
+        color: #fff;
       }
-      .notification-text {
-        flex: 1;
+      .bg-success {
+        background-color: #28a745 !important;
+      }
+      .bg-warning {
+        background-color: #ffc107 !important;
+        color: #000;
+      }
+      .bg-info {
+        background-color: #17a2b8 !important;
+      }
+      .bg-danger {
+        background-color: #dc3545 !important;
+      }
+
+      .notification-text b {
+        color: #2c4c7a;
       }
       .notification-time {
         font-size: 13px;
         color: gray;
+        margin-top: 4px;
       }
-      @media (max-width: 768px) {
-        .sidebar {
-          width: 100%;
-          position: relative;
-        }
-        .main-content {
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .main {
           margin-left: 0;
           padding: 20px;
+        }
+        .sidebar {
+          left: -260px;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .sidebar-toggle {
+          display: block;
+        }
+        .info-item {
+          width: 100%;
+        }
+        .profile-card {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .profile-card img {
+          margin-bottom: 15px;
         }
       }
     </style>
   </head>
   <body>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar toggle button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+      <i class="bi bi-list"></i>
+    </button>
+
     <!-- Sidebar -->
-    <div class="sidebar">
-      <h2>Clinic Digital</h2>
-      <a href="../pages/patient-dashboard.html">ផ្ទៃដើម</a>
-      <a href="../pages/appointment-flow.html"><b>ការណាត់ជួប</b></a>
-      <a href="../pages/medical-history.html">ប្រវត្តិក្នុងការពិនិត្យ</a>
-      <a href="../pages/notification.html">សារ / ជូនដំណឹង</a>
-      <a href="../pages/profile-user.html">ពត៌មានគណនី</a>
-      <a href="../pages/logout.html">ចាកចេញ</a>
+    <div class="sidebar" id="sidebar">
+      <h2>គ្លីនិក​</h2>
+      <div>
+        <div>
+          <a href="../pages/appointment-flow.html"
+            ><i class="bi bi-people"></i> ការណាត់ជួប</a
+          >
+          <a href="../pages/profile-user.html"
+            ><i class="bi bi-person-circle"></i> ពត៌មានគណនី</a
+          >
+          <a href="../pages/medical-history.html"
+            ><i class="bi bi-clipboard-heart"></i> ប្រវត្តិពិនិត្យ</a
+          >
+          <a href="../pages/notification.html" class="active"
+            ><i class="bi bi-bell"></i> សារ / ជូនដំណឹង</a
+          >
+          <a href="../pages/logout.html"
+            ><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a
+          >
+        </div>
+      </div>
+      <div class="upgrade">
+        <p>ធ្វើការកែលម្អទៅ PRO</p>
+        <button>UPDATE TO PRO</button>
+      </div>
     </div>
 
     <!-- Main Content -->
-    <div class="main-content">
-      <div class="dashboard-header">
-        <h1>សារជូនដំណឹង</h1>
-        <img
-          src="https://img.icons8.com/ios-filled/50/000000/appointment-reminders.png"
-          alt="notification"
-        />
+    <div class="main">
+      <div class="main-header">
+        <h2>សារជូនដំណឹង</h2>
+        <button class="btn btn-primary">សារថ្មី</button>
       </div>
 
-      <!-- Notification List -->
-      <div class="card notification-card">
-        <div class="card-header">សារថ្មីៗ</div>
-        <div class="card-body">
-          <div class="notification-item">
-            <div class="notification-icon">📅</div>
-            <div class="notification-text">
-              <b>ការណាត់ជួបថ្មី</b> - អ្នកមានការណាត់ជួបនៅថ្ងៃទី 05/09/2025 ជាមួយ
-              Dr. Dara
-              <div class="notification-time">2 ម៉ោងមុន</div>
-            </div>
+      <!-- Notifications List -->
+      <div class="notification-card">
+        <div class="notification-item">
+          <div class="notification-icon bg-success">
+            <i class="bi bi-calendar-event"></i>
           </div>
-
-          <div class="notification-item">
-            <div class="notification-icon">💊</div>
-            <div class="notification-text">
-              <b>ការចងចាំថ្នាំ</b> - សូមកុំភ្លេចយកថ្នាំ Aspirin 100mg
-              <div class="notification-time">ម្សិលមិញ</div>
-            </div>
+          <div class="notification-text">
+            <b>ការណាត់ជួបថ្មី</b> - អ្នកមានការណាត់ជួបនៅថ្ងៃទី 05/09/2025 ជាមួយ
+            Dr. Dara
+            <div class="notification-time">2 ម៉ោងមុន</div>
           </div>
-
-          <div class="notification-item">
-            <div class="notification-icon">📜</div>
-            <div class="notification-text">
-              <b>លទ្ធផលតេស្ត</b> - លទ្ធផលឈាមបានត្រៀមរួចហើយ
-              <div class="notification-time">3 ថ្ងៃមុន</div>
-            </div>
+        </div>
+        <div class="notification-item">
+          <div class="notification-icon bg-warning">
+            <i class="bi bi-capsule"></i>
           </div>
-
-          <div class="notification-item">
-            <div class="notification-icon">💵</div>
-            <div class="notification-text">
-              <b>វិក្កយបត្រ</b> - វិក្កយបត្រថ្មីត្រូវបានបន្ថែម
-              <div class="notification-time">1 សប្តាហ៍មុន</div>
-            </div>
+          <div class="notification-text">
+            <b>ការចងចាំថ្នាំ</b> - សូមកុំភ្លេចយកថ្នាំ Aspirin 100mg
+            <div class="notification-time">ម្សិលមិញ</div>
+          </div>
+        </div>
+        <div class="notification-item">
+          <div class="notification-icon bg-info">
+            <i class="bi bi-file-earmark-medical"></i>
+          </div>
+          <div class="notification-text">
+            <b>លទ្ធផលតេស្ត</b> - លទ្ធផលឈាមបានត្រៀមរួចហើយ
+            <div class="notification-time">3 ថ្ងៃមុន</div>
+          </div>
+        </div>
+        <div class="notification-item">
+          <div class="notification-icon bg-danger">
+            <i class="bi bi-receipt"></i>
+          </div>
+          <div class="notification-text">
+            <b>វិក្កយបត្រ</b> - វិក្កយបត្រថ្មីត្រូវបានបន្ថែម
+            <div class="notification-time">1 សប្តាហ៍មុន</div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("show");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+
+    // same JS logic from your previous appointment-flow (steps, addAppointment, viewInvoice, printInvoice)
+    function nextStep(step) {
+      document
+        .querySelectorAll(".step")
+        .forEach((s) => s.classList.remove("active"));
+      document.getElementById("step" + step).classList.add("active");
+      document
+        .querySelectorAll(".step-indicator div")
+        .forEach((ind) => ind.classList.remove("active-step"));
+      if (step <= 4)
+        document
+          .getElementById("indicator" + step)
+          .classList.add("active-step");
+
+      if (step === 2) {
+        const doctor = document.getElementById("doctor").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        document.getElementById(
+          "doctorInfo"
+        ).innerHTML = `<h5>${doctor}</h5><p>កាលបរិច្ឆេទ: ${date}</p><p>ម៉ោង: ${time}</p>`;
+      }
+      if (step === 4) {
+        const doctor = document.getElementById("doctor").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const payment = document.getElementById("paymentMethod").value;
+        document.getElementById(
+          "confirmMsg"
+        ).innerHTML = `ការណាត់ជួបជាមួយ <strong>${doctor}</strong> ត្រូវបានបញ្ជាក់។<br>កាលបរិច្ឆេទ: ${date} | ម៉ោង: ${time}<br>វិធីបង់ប្រាក់: ${payment} | តម្លៃ: $25`;
+      }
+    }
+
+    function addAppointment() {
+      const table = document
+        .getElementById("appointmentsTable")
+        .getElementsByTagName("tbody")[0];
+      const doctorFull = document.getElementById("doctor").value;
+      const doctorName = doctorFull.split(" - ")[0];
+      const department = doctorFull.split(" - ")[1] || "";
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const payment = document.getElementById("paymentMethod").value;
+
+      const row = table.insertRow();
+      const statusBadge = '<span class="badge bg-success">បញ្ចប់</span>';
+      const invoiceButton = `<button class="btn btn-sm btn-info" onclick="viewInvoice('${doctorName}','${department}','${date}','${time}','${payment}')">វិក័យបត្រ</button>`;
+
+      row.innerHTML = `<td>${date}</td>
+                         <td>${time}</td>
+                         <td>${doctorName}</td>
+                         <td>${department}</td>
+                         <td>${statusBadge}</td>
+                         <td>
+                           <button class="btn btn-sm btn-warning editBtn">កែប្រែ</button>
+                           <button class="btn btn-sm btn-danger deleteBtn">លុប</button>
+                           ${invoiceButton}
+                         </td>`;
+
+      row.querySelector(".deleteBtn").addEventListener("click", () => {
+        if (confirm("តើអ្នកចង់លុបការណាត់ជួបនេះមែនទេ?"))
+          table.deleteRow(row.rowIndex - 1);
+      });
+      row.querySelector(".editBtn").addEventListener("click", () => {
+        document.getElementById("doctor").value = doctorFull;
+        document.getElementById("date").value = date;
+        document.getElementById("time").value = time;
+        document.getElementById("paymentMethod").value = payment;
+        new bootstrap.Modal(document.getElementById("bookingModal")).show();
+        table.deleteRow(row.rowIndex - 1);
+      });
+
+      bootstrap.Modal.getInstance(
+        document.getElementById("bookingModal")
+      ).hide();
+      nextStep(1);
+    }
+
+    function viewInvoice(doctor, department, date, time, payment) {
+      document.getElementById("invDoctor").textContent = doctor;
+      document.getElementById("invDepartment").textContent = department;
+      document.getElementById("invDate").textContent = date;
+      document.getElementById("invTime").textContent = time;
+      document.getElementById("invPayment").textContent = payment;
+      new bootstrap.Modal(document.getElementById("invoiceModal")).show();
+    }
+
+    function printInvoice() {
+      const content = document.querySelector(
+        "#invoiceModal .modal-body"
+      ).innerHTML;
+      const win = window.open("", "_blank", "width=600,height=700");
+      win.document.write(
+        `<html><head><title>វិក័យបត្រ</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></head><body><div class="container mt-4">${content}</div></body></html>`
+      );
+      win.document.close();
+      win.print();
+    }
+  </script>
 </html>

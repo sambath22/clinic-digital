@@ -3,412 +3,344 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ពត៌មានផ្ទាល់ខ្លួន</title>
-    <link href="../assets/img/logo1.png" rel="icon" />
-  <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />  
-    <!-- ---------font-awesome---------- -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ប្រវត្តិអ្នកជំងឺ</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <style>
-      body {
-        background: #e0f2fe;
-        color: #1e3a8a;
-      }
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-      .profile-card {
-        background: #fff;
-        border-radius: 15px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-        max-width: 800px;
-        margin: 50px auto;
-      }
-
-      .profile-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #cbd5e1;
-        padding-bottom: 15px;
-      }
-
-      .profile-header img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 20px;
-        border: 3px solid #1e3a8a;
-      }
-
-      .profile-header h3 {
-        margin: 0;
-        font-weight: bold;
-      }
-
-      .profile-header p {
-        margin: 0;
-        color: #555;
-      }
-
-      .info-item {
-        margin-bottom: 15px;
-      }
-
-      .info-label {
-        font-weight: bold;
-        color: #1e3a8a;
-      }
-
-      .info-value {
-        color: #555;
-        margin-left: 5px;
-      }
-
-      .btn-edit {
-        background: #1e3a8a;
-        color: #fff;
-        font-weight: bold;
-        border-radius: 25px;
-        padding: 8px 20px;
-        transition: 0.3s;
-      }
-
-      .btn-edit:hover {
-        background: #3b82f6;
-        color: #fff;
-      }
-
-      .btn-back {
-        background: #f87171;
-        color: #fff;
-        font-weight: bold;
-        border-radius: 25px;
-        padding: 8px 20px;
-        transition: 0.3s;
-        margin-left: 10px;
-        text-decoration: none;
-      }
-
-      .btn-back:hover {
-        background: #ef4444;
-        color: #fff;
-      }
-
-      @media (max-width: 576px) {
-        .profile-header {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .profile-header img {
-          margin-bottom: 10px;
-        }
-
-        .text-end {
-          text-align: center !important;
-        }
-
-        .btn-back {
-          margin-left: 0;
-          margin-top: 10px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../assets/css/patient-dashboard.css" />
   </head>
   <body>
-<!-- ======= HEADER ======= -->
-<header class="bg-dark-blue">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg rounded-3" >
-      <div class="container-fluid">
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-        <!-- Logo (Left) -->
-        <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="index.html">
-          <img src="../assets/img/logo1.png" alt="Clinic Digital Logo" height="40" class="me-2">
-        </a>
+    <!-- Sidebar toggle button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+      <i class="bi bi-list"></i>
+    </button>
 
-        <!-- Mobile Toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Menu (CENTER) -->
-        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-          <ul class="navbar-nav fw-bold text-uppercase">
-            <li class="nav-item px-2">
-              <a class="nav-link active text-white" href="../pages/index2.html">ទំព័រដើម</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/aboutUs.html">អំពីយើង</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/appointment.html">ការណាត់ជួប</a>
-            </li>
-
-            <!-- Services Dropdown -->
-            <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
-                សេវាកម្ម
-              </a>
-              <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="../pages/department_page.html">សេវាកម្មទាំងអស់</a></li>
-                <li><a class="dropdown-item text-white" href="../pages/department-detail.html">សេវាកម្មលំអិត</a></li>
-              </ul>
-            </li>
-
-            <!-- Pages Dropdown -->
-            <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">
-               ទំព័រផ្សេងៗ
-              </a>
-              <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="blog.html">ពត៌មានថ្មីៗ</a></li>
-                <li><a class="dropdown-item text-white" href="timetable.html">ពេលវេលា</a></li>
-                <li><a class="dropdown-item text-white" href="pricing-plan.html">តម្លៃ</a></li>
-                <li><hr class="dropdown-divider bg-white"></li>
-                <li><a class="dropdown-item text-white" href="question.html">សាកសួរព័ត៍មាន</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/doctor.html">វេជ្ជបណ្ឌិត</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/contact_us.html">ទំនាក់ទំនង</a>
-            </li>
-          </ul>
-        </div>
-
-       <!-- Right Side (Icons + Profile Dropdown) -->
-<div class="d-flex ms-3 align-items-center">
-  <!-- Messages -->
-  <div class="dropdown me-3">
-    <a class="text-white position-relative" href="#" id="messagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-envelope-fill fs-5"></i>
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-        3
-        <span class="visually-hidden">unread messages</span>
-      </span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end rounded-3" style="min-width: 250px; background-color: #1e3a8a;">
-      <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
-      <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
-      <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
-    </ul>
-  </div>
-
-<!-- Notification Link -->
-<div class="me-3">
-  <a class="text-white position-relative" href="../notification.html" id="notificationsLink">
-    <i class="bi bi-bell-fill fs-5"></i>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-      3
-      <span class="visually-hidden">unread notifications</span>
-    </span>
-  </a>
-</div>
-
-
-  <!-- Profile Dropdown -->
-  <div class="dropdown">
-    <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="../assets/img/user.png" alt="user" width="32" height="32" class="rounded-circle me-2">
-      សំបាត់
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end rounded-3" style="background-color: #1e3a8a;">
-      <li><a class="dropdown-item text-white" href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
-      <li><a class="dropdown-item text-white" href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
-      <li><hr class="dropdown-divider bg-white"></li>
-      <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
-    </ul>
-  </div>
-</div>
-
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <h2>គ្លីនិក​</h2>
+      <div>
+        <a href="../pages/appointment-flow.html"
+          ><i class="bi bi-people"></i> ការណាត់ជួប</a
+        >
+        <a href="../pages/profile-user.html" class="active"
+          ><i class="bi bi-person-circle"></i> ពត៌មានគណនី</a
+        >
+        <a href="../pages/medical-history.html"
+          ><i class="bi bi-clipboard-heart"></i> ប្រវត្តិពិនិត្យ</a
+        >
+        <a href="../pages/notification.html"
+          ><i class="bi bi-bell"></i> សារ / ជូនដំណឹង</a
+        >
+        <a href="../pages/logout.html"
+          ><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a
+        >
       </div>
-    </nav>
+      <div class="upgrade">
+        <p>ធ្វើការកែលម្អទៅ PRO</p>
+        <button>UPDATE TO PRO</button>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+      <div class="main-header">
+        <h2>ប្រវត្តិអ្នកជំងឺ</h2>
+        <div class="mt-2 mt-md-0">
+          <button
+            class="btn-edit me-2"
+            data-bs-toggle="modal"
+            data-bs-target="#editProfileModal"
+          >
+            កែប្រែ
+          </button>
+
+          <button class="btn-edit">បោះពុម្ព</button>
+        </div>
+      </div>
+
+      <!-- Profile Card -->
+      <div class="profile-card">
+        <img src="../assets/img/user.png" alt="Profile Image" />
+        <div class="profile-info">
+          <h3>សម្បត្តិ</h3>
+          <p>+38 (093) 23 45 678 | katepro@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card-section">
+            <h5>ព័ត៌មានទូទៅ </h5>
+            <div class="info-row">
+              <div class="info-item">
+                <span class="label">ថ្ងៃកំណើត:</span>
+                <span class="value">23.07.1994</span>
+              </div>
+              <div class="info-item">
+                <span class="label">អាសយដ្ឋាន:</span>
+                <span class="value">Lviv, ផ្លូវ Chornovola, 67</span>
+              </div>
+              <div class="info-item">
+                <span class="label">ថ្ងៃចុះបញ្ជី:</span>
+                <span class="value">ថ្ងៃព្រហស្បតិ៍ 25 ឧសភា</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-section">
+            <h5>
+              ប្រវត្តិជំងឺ </button>
+            </h5>
+            <div class="info-row">
+              <div class="info-item">
+                <span class="label">អាល្លែហ្ស៊ី:</span>
+                <span class="value">ពោត, ផ្កាឈូក</span>
+              </div>
+              <div class="info-item">
+                <span class="label">ជំងឺប្រចាំកាយ:</span>
+                <span class="value">រោគសួត</span>
+              </div>
+              <div class="info-item">
+                <span class="label">ប្រភេទឈាម:</span>
+                <span class="value">I+</span>
+              </div>
+              <div class="info-item">
+                <span class="label">ការឆ្លងកាលពីមុន:</span>
+                <span class="value">វីរុសកូរ៉ូណា</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Future Visits -->
+      <div class="card-section">
+        <h5>ការណាត់ជួបអនាគត</h5>
+        <div class="table-responsive">
+          <table class="visits-table">
+            <thead>
+              <tr>
+                <th>ថ្ងៃ និងម៉ោង</th>
+                <th>សេវាកម្ម</th>
+                <th>វេជ្ជបណ្ឌិត</th>
+                <th>ស្ថានភាព</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>26 កញ្ញា 2023, 11:00-12:30</td>
+                <td>ការព្យាបាល និងការសំអាតបំពង់ធ្មេញ</td>
+                <td>Oksana Ma...</td>
+                <td><span class="badge-scheduled">បានកំណត់</span></td>
+              </tr>
+              <tr>
+                <td>27 កញ្ញា 2023, 11:00-12:30</td>
+                <td>សម្អាតធ្មេញស្អាត</td>
+                <td>Max Oched...</td>
+                <td><span class="badge-scheduled">បានកំណត់</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+<!-- Files and Notes -->
+<div class="row">
+  <!-- Files Section -->
+  <div class="col-md-6">
+    <div class="card-section">
+      <h5>ឯកសារ</h5>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Check Up Result.pdf (123kb)
+          <a href="../assets/files/CheckUpResult.pdf" download class="btn btn-sm btn-primary">
+            ទាញយក
+          </a>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Medical Prescriptions.pdf (123kb)
+          <a href="../assets/files/MedicalPrescriptions.pdf" download class="btn btn-sm btn-primary">
+            ទាញយក
+          </a>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Blood Test Result.pdf (123kb)
+          <a href="../assets/files/BloodTestResult.pdf" download class="btn btn-sm btn-primary">
+            ទាញយក
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
-</header>
-    <div class="container">
-      <div class="profile-card">
-        <div class="profile-header">
-          <img
-            id="profileImage"
-            src="../assets/img/user copy.png"
-            alt="Profile Picture"
-          />
-          <div>
-            <h3 id="profileName">ឈ្មោះ</h3>
-            <p id="profileRole">តួនាទី</p>
-          </div>
-        </div>
+  <!-- Notes Section -->
+  <div class="col-md-6">
+    <div class="card-section">
+      <h5>កំណត់សំគាល់</h5>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Note 31.06.23.pdf
+          <a href="../assets/files/Note_31_06_23.pdf" download class="btn btn-sm btn-secondary">
+            ទាញយក
+          </a>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Note 23.06.23.pdf
+          <a href="../assets/files/Note_23_06_23.pdf" download class="btn btn-sm btn-secondary">
+            ទាញយក
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-        <div class="profile-info">
-          <div class="row">
-            <div class="col-md-6 info-item">
-              <span class="info-label">អ៊ីមែល៖</span>
-              <span class="info-value" id="profileEmail"></span>
-            </div>
-            <div class="col-md-6 info-item">
-              <span class="info-label">លេខទូរស័ព្ទ៖</span>
-              <span class="info-value" id="profilePhone"></span>
-            </div>
-            <div class="col-md-6 info-item">
-              <span class="info-label">អាសយដ្ឋាន៖</span>
-              <span class="info-value" id="profileAddress"></span>
-            </div>
-            <div class="col-md-6 info-item">
-              <span class="info-label">ថ្ងៃកំណើត៖</span>
-              <span class="info-value" id="profileDob"></span>
-            </div>
+    </div>
+    <!-- Edit Modal -->
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">កែប្រែព័ត៌មាន</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
           </div>
-        </div>
+          <div class="modal-body">
+            <form id="editForm">
+              <h6>ព័ត៌មានទូទៅ</h6>
+              <div class="mb-3">
+                <label class="form-label">ឈ្មោះ</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editName"
+                  value="សម្បត្តិ"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">ទូរស័ព្ទ / អ៊ីមែល</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editContact"
+                  value="+38 (093) 23 45 678 | katepro@gmail.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">អាសយដ្ឋាន</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editAddress"
+                  value="Lviv, ផ្លូវ Chornovola, 67"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">ថ្ងៃកំណើត</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="editDOB"
+                  value="1994-07-23"
+                />
+              </div>
 
-        <div class="text-end mt-3">
-          <a href="edit-profile.html" class="btn btn-edit">កែប្រែពត៌មាន</a>
-          <a href="patient-dashboard.html" class="btn btn-back"
-            >ត្រឡប់ទៅផ្ទៃដើម</a
-          >
+              <hr />
+              <h6>ប្រវត្តិជំងឺ</h6>
+              <div class="mb-3">
+                <label class="form-label">អាល្លែហ្ស៊ី</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editAllergy"
+                  value="ពោត, ផ្កាឈូក"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">ជំងឺប្រចាំកាយ</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editChronic"
+                  value="រោគសួត"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">ប្រភេទឈាម</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editBlood"
+                  value="I+"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">ការឆ្លងកាលពីមុន</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editPastDisease"
+                  value="វីរុសកូរ៉ូណា"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              បិទ
+            </button>
+            <button class="btn btn-primary" onclick="saveEdit()">
+              រក្សាទុក
+            </button>
+          </div>
         </div>
       </div>
     </div>
-     <!-- ====================Footer=============================== -->
-    <footer class="footer pt-3 text-white">
 
-      <!-- Links Section -->
-      <section class="link-footer ">
-        <div class="container py-5">
-          <!-- Brand -->
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <img src="assets/img/logo1.png" alt="" width="160" class="mb-3" />
-             
-            </div>
-          </div>
-
-          <div class="row no-wrap">
-            <!-- Social -->
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h5 class="fw-bold mb-3">រក្សាទំនាក់ទំនង</h5>
-              <p class="text-white-50">
-                តាមដានពួកយើងសម្រាប់ព័ត៌មានសុខភាពប្រចាំថ្ងៃតាមរយៈ Social Media
-              </p>
-              <div class="d-flex gap-2 mb-3">
-                <a href="#" class="social-btn bg-fb text-white"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-btn bg-danger text-white"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-btn bg-linkin text-white"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn bg-ig text-white"><i class="fab fa-instagram"></i></a>
-              </div>
-              <small class="text-white-50"><i class="fas fa-users me-1"></i>អ្នកគាំទ្រ 50K+</small>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h5 class="fw-bold mb-3">តំណភ្ជាប់រហ័ស</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="pages/aboutUs.html" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
-                </li>
-                <li>
-                  <a href="pages/department_page.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
-                </li>
-                <li>
-                  <a href="pages/doctor.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
-                </li>
-                <li>
-                  <a href="pages/timetable.html" class="f-link"><i class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
-                </li>
-                <li>
-                  <a href="pages/appointment.html" class="f-link"><i class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Services -->
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h5 class="fw-bold mb-3">សេវាសុខភាព</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
-                </li>
-                <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
-                </li>
-                <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-heart me-2"></i>រោគបេះដូង</a>
-                </li>
-                <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
-                </li>
-                <li>
-                  <a href="department-detail.html" class="f-link"><i class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Contact -->
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h5 class="fw-bold mb-3">ព័ត៍មានទំនាក់ទំនង</h5>
-              <p class="text-white-50 mb-1">
-                <i class="fas fa-map-marker-alt me-2"></i>123 Wellness Avenue,
-                ភ្នំពេញ
-              </p>
-              <p class="mb-1">
-                <a href="tel:123-436-7890" class="f-link"><i class="fas fa-phone me-2"></i>+1 (123) 436-7890</a>
-              </p>
-              <p class="mb-1">
-                <a href="mailto:hello@prohealth.com" class="f-link"><i
-                    class="fas fa-envelope me-2"></i>Welcometo@DigitalClinic.com</a>
-              </p>
-              <p class="text-white-50">
-                <i class="fas fa-clock me-2"></i>24/7 ការថែទាំសង្គ្រោះបន្ទាន់
-              </p>
-            </div>
-
-            <hr class="my-4" style="border:1px,solid, rgb(35, 88, 180)" />
-            <div class="row">
-              <div class="col text-center">
-                <p class="text-white-50 mb-0">
-                  &copy; 2025 គ្លីនិកឌីជីថល | រក្សាសិទ្ធិដោយ G-15 |
-                  <a href="department_page.html" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
-    </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-     
-      // Load profile data from localStorage
-      const data = JSON.parse(localStorage.getItem("profileData")) || {
-        name: "អន សម្បត្តិ",
-        role: "អ្នកជំងឺ",
-        email: "sambath@example.com",
-        phone: "+855 12 345 678",
-        address: "ភ្នំពេញ, កម្ពុជា",
-        dob: "2000-01-01",
-        image: "../assets/img/user.png",
-      };
+      // Sidebar toggle
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        sidebar.classList.toggle("show");
+        overlay.classList.toggle("show");
+      }
 
-      document.getElementById("profileName").textContent = data.name;
-      document.getElementById("profileRole").textContent = data.role;
-      document.getElementById("profileEmail").textContent = data.email;
-      document.getElementById("profilePhone").textContent = data.phone;
-      document.getElementById("profileAddress").textContent = data.address;
-      document.getElementById("profileDob").textContent = data.dob;
-      document.getElementById("profileImage").src = data.image;
+      // Save modal info
+      function saveEdit() {
+        const form = document.getElementById("editForm");
+        const inputs = form.querySelectorAll("input");
+
+        // Example: update profile card dynamically
+        document.querySelector(".profile-info h3").textContent =
+          inputs[0].value;
+        document.querySelector(".profile-info p").textContent = inputs[1].value;
+
+        // Close modal safely
+        const modalEl = document.getElementById("editProfileModal");
+        const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modal.hide();
+
+        alert(`ព័ត៌មានបានរក្សាទុក: ${inputs[0].value}`);
+      }
     </script>
   </body>
 </html>

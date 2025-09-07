@@ -73,6 +73,7 @@ body {
 
 /* ====================HERO DEPARTMENT [START]================ */
 .hero_department {
+  min-height: 80vh;
   padding-top: 100px;
   /* padding: 800px 10px; */
   background: url("../img/department_img/hero_bg.svg") center/cover no-repeat;
@@ -178,7 +179,7 @@ body {
 .about-service .service-card .service-body p {
   color: var(--text-primary);
   display: -webkit-box;
-  /* -webkit-line-clamp: 3; */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -273,7 +274,7 @@ Bou Leakhena, [9/5/2025 2:48 PM]
 .why-choose-us .choose-us-content .choose-us-card .service-body p {
   color: var(--text-primary);
   display: -webkit-box;
-  /* -webkit-line-clamp: 3; */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
