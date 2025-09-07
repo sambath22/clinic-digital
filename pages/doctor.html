@@ -25,7 +25,6 @@
 
 <body class="bg-black">
    <!-- ======= HEADER ======= -->
- 
 <header class="fixed-top">
   <div class="container">
     <nav class="navbar navbar navbar-expand-xl">
@@ -47,10 +46,10 @@
           <!-- Center Nav links -->
           <ul class="navbar-nav fw-bold text-uppercase mx-auto">
             <li class="nav-item px-2">
-              <a class="nav-link  text-white" href="../pages/homepage.html">ទំព័រដើម</a>
+              <a class="nav-link text-white" href="../pages/homepage.html">ទំព័រដើម</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="../pages/aboutUs.html">អំពីយើង</a>
+              <a class="nav-link text-white  active" href="../pages/aboutUs.html">អំពីយើង</a>
             </li>
             <li class="nav-item px-2">
               <a class="nav-link text-white" href="../pages/appointment.html">ការណាត់ជួប</a>
@@ -58,11 +57,11 @@
 
             <!-- Services Dropdown -->
             <li class="nav-item dropdown px-2">
-              <a class="nav-link dropdown-toggle text-white " href="#" id="servicesDropdown" role="button"
-                data-bs-toggle="dropdown ">សេវាកម្ម</a>
+              <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button"
+                data-bs-toggle="dropdown">សេវាកម្ម</a>
               <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
                 <li><a class="dropdown-item text-white" href="../pages/department_page.html">សេវាកម្មទាំងអស់</a></li>
-                <li><a class="dropdown-item text-white " href="../pages/department-detail.html">សេវាកម្មលំអិត</a></li>
+                <li><a class="dropdown-item text-white" href="../pages/emergency.html">សេវាកម្មលំអិត</a></li>
               </ul>
             </li>
 
@@ -87,38 +86,37 @@
             </li>
           </ul>
 
-          <!-- Right Side (Messages + Notifications + Profile) -->
-          <div class="d-flex align-items-center">
-            <!-- Messages -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="messagesDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-envelope-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
-              </ul>
-            </div>
+        <!-- Right Side (Telegram + Notifications + Profile) -->
+<div class="d-flex align-items-center">
 
-            <!-- Notifications -->
-            <div class="dropdown me-3">
-              <a class="text-white position-relative" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="bi bi-bell-fill fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3"
-                style="min-width: 250px; background-color: #1e3a8a;">
-                <li><a class="dropdown-item text-white" href="#">Notification 1</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 2</a></li>
-                <li><a class="dropdown-item text-white" href="#">Notification 3</a></li>
-              </ul>
-            </div>
+  <!-- Telegram Icon Link -->
+<a 
+  class="text-white fs-4 me-1"
+  href="https://t.me/clinic_digital"
+  target="_blank"
+  title="Join us on Telegram"
+  style="color: #0088cc;"
+>
+  <i class="fa-brands fa-telegram"></i>
+</a>
 
+
+  <!-- Notifications Icon (with badge + dropdown) -->
+  <div class="dropdown me-1">
+   
+   
+  <!-- Notification Icon -->
+      <a 
+        href="../pages/notification.html" 
+        class="text-white fs-4 me-3"
+        title="View Notifications"
+      >
+        <i class="fa-solid fa-bell"></i>
+      </a>
+
+
+   
+  </div>
             <!-- Profile -->
             <div class="dropdown">
               <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#"
@@ -139,6 +137,7 @@
     </nav>
   </div>
 </header>
+
 
   <!-- ==============HEADER[END]=================== -->
   <main>
