@@ -1301,23 +1301,21 @@ body {
 .doctor-card:hover .doctor-social {
   opacity: 1;
 }
-
 .doctor-social a {
+  background-color: var(--secondary);
+  border-radius: 20px;
+  text-decoration: none;
+}
+.doctor-social a i {
   display: flex;
   justify-content: center;
-  text-decoration: none;
   align-items: center;
   width: 35px;
   height: 35px;
-  background-color: var(--secondary);
+
   color: #fff;
-  border-radius: 50%;
   font-size: 14px;
   transition: all 0.3s ease;
-}
-
-.doctor-social a:hover {
-  background-color: #0056b3;
 }
 
 .card-body {
