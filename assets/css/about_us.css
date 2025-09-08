@@ -205,12 +205,6 @@ body {
   transition: 0.2s;
 }
 
-<<<<<<< HEAD
-Bou Leakhena, [9/5/2025 2:48 PM]
-
-
-=======
->>>>>>> 6d64cb9fa33840445b96452b5d0fa78d33897797
 .small-text {
   font-size: 40px;
   color: var(--secondary);
@@ -299,7 +293,7 @@ Bou Leakhena, [9/5/2025 2:48 PM]
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden; 
-   
+  background-color: #3971b6a7;
 }
 
 .doctor-image img {
