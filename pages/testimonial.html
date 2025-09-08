@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>អំពីយើង</title>
+    <link href="../assets/img/logo1.png" rel="icon" />
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- ---------font-awesome---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootrap CSS  -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/about_us.css">
+    <style>
+        .testimonial {
+            background-color: #f6f6f6;
+        }
+
+        .testimonial-card {
+            height: 300px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* make spacing nice */
+        }
+
+        .testimonial-card p {
+            flex-grow: 1;
+            /* text area adjusts */
+            overflow: hidden;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .swiper-slide {
+            padding: 0 !important;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar navbar-expand-xl">
+                <div class="container-fluid">
+
+                    <!-- Logo -->
+                    <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="index.html">
+                        <img src="../assets/img/logo1.png" alt="Clinic Digital Logo" height="40" class="me-2">
+                    </a>
+
+                    <!-- Hamburger -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible Menu -->
+                    <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+                        <!-- Center Nav links -->
+                        <ul class="navbar-nav fw-bold text-uppercase mx-auto">
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-white" href="../pages/homepage.html">ទំព័រដើម</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-white  active" href="../pages/aboutUs.html">អំពីយើង</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-white" href="../pages/appointment.html">ការណាត់ជួប</a>
+                            </li>
+
+                            <!-- Services Dropdown -->
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown"
+                                    role="button" data-bs-toggle="dropdown">សេវាកម្ម</a>
+                                <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
+                                    <li><a class="dropdown-item text-white"
+                                            href="../pages/department_page.html">សេវាកម្មទាំងអស់</a></li>
+                                    <li><a class="dropdown-item text-white"
+                                            href="../pages/emergency.html">សេវាកម្មលំអិត</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Pages Dropdown -->
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button"
+                                    data-bs-toggle="dropdown">ទំព័រផ្សេងៗ</a>
+                                <ul class="dropdown-menu rounded-3" style="background-color: #1e3a8a;">
+                                    <li><a class="dropdown-item text-white" href="blog.html">ពត៌មានថ្មីៗ</a></li>
+                                    <li><a class="dropdown-item text-white" href="timetable.html">ពេលវេលា</a></li>
+                                    <li><a class="dropdown-item text-white" href="pricing-plan.html">តម្លៃ</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider bg-white">
+                                    </li>
+                                    <li><a class="dropdown-item text-white" href="question.html">សាកសួរព័ត៍មាន</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-white" href="../pages/doctor.html">វេជ្ជបណ្ឌិត</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-white" href="../pages/contact_us.html">ទំនាក់ទំនង</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right Side (Messages + Notifications + Profile) -->
+                        <div class="d-flex align-items-center">
+                            <!-- Messages -->
+                            <div class="dropdown me-3">
+                                <a class="text-white position-relative" href="#" id="messagesDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-envelope-fill fs-5"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end rounded-3"
+                                    style="min-width: 250px; background-color: #1e3a8a;">
+                                    <li><a class="dropdown-item text-white" href="#">Message 1</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Message 2</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Message 3</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Notifications -->
+                            <div class="dropdown me-3">
+                                <a class="text-white position-relative" href="#" id="notifDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-bell-fill fs-5"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end rounded-3"
+                                    style="min-width: 250px; background-color: #1e3a8a;">
+                                    <li><a class="dropdown-item text-white" href="#">Notification 1</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Notification 2</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Notification 3</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Profile -->
+                            <div class="dropdown">
+                                <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                    href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="../assets/img/user.png" alt="user" width="32" height="32"
+                                        class="rounded-circle me-2">
+                                    សំបាត់
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end rounded-3"
+                                    style="background-color: #1e3a8a;">
+                                    <li><a class="dropdown-item text-white"
+                                            href="../pages/patient-dashboard.html">ផ្ទាំងគ្រប់គ្រង</a></li>
+                                    <li><a class="dropdown-item text-white"
+                                            href="../pages/profile-user.html">ពត៌មានផ្ទាល់ខ្លួន</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider bg-white">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="../pages/logout.html">ចាកចេញ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- End collapse -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section class="hero_department d-flex align-items-center">
+            <div class="overlay"></div> <!-- Overlay layer -->
+            <div class="container">
+                <div class="row align-items-center pt-5">
+                    <!-- Left Column -->
+                    <div class="col-md-6" data-aos-duration="1000">
+                        <img src="../assets/img/testimonial/banner_img.png" alt="Hero Image"
+                            class="img-fluid hero-img" />
+                    </div>
+                    <!-- Right Column -->
+                    <div class="col-md-6" data-aos-duration="1000">
+                        <h1 class="display-4 fw-bold text-white">ស្វែងរកផែនការត្រឹមត្រូវសម្រាប់អ្នក</h1>
+                        <p class="lead my-4 text-white">
+                            ស្វែងរកជម្រើសសមាជិកភាពរបស់យើង ហើយចាប់ផ្តើមដំណើររបស់អ្នកទៅកាន់សុខភាពកាន់តែប្រសើរ
+                        </p>
+                        <div class="btn-submit">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonial Page -->
+        <section class="testimonial py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold">មតិអតិថិជន</h2>
+                            <p class="text-muted">អតិថិជនរបស់យើងបានចែករំលែកបទពិសោធន៍អំពីសេវាកម្ម</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- Testimonial Card 1 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/t-05.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">សុខ សាន</h6>
+                                                <small class="text-muted">ពិនិត្យទូទៅ - កក្កដា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            សេវាកម្មល្អណាស់ វេជ្ជបណ្ឌិតយកចិត្តទុកដាក់ និងពេលវេលាត្រឹមត្រូវ។
+                                            ខ្ញុំពិតជាផ្ទៀងផ្ទាត់។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 2 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/t-01.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">ចាន់ ណារី</h6>
+                                                <small class="text-muted">សម្ភព - មិថុនា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            ខ្ញុំទទួលបានសេវាកម្មយ៉ាងអស្ចារ្យ ពេទ្យនិងបុគ្គលិកមានការថែទាំល្អ
+                                            និងមានទំនុកចិត្ត។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 3 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img//testimonial/t-03.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">ស្រីនាង វណ្ណា</h6>
+                                                <small class="text-muted">ធ្មេញ - មេសា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            គ្លីនិកមានបរិយាកាសស្អាត សេវាកម្មប្រកបដោយភាពជំនាញ។
+                                            ខ្ញុំនឹងណែនាំដល់មិត្តភក្តិ។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Card 3 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/t-06.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">ស្រីនាង វណ្ណា</h6>
+                                                <small class="text-muted">ធ្មេញ - មេសា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            គ្លីនិកមានបរិយាកាសស្អាត សេវាកម្មប្រកបដោយភាពជំនាញ។
+                                            ខ្ញុំនឹងណែនាំដល់មិត្តភក្តិ។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/tm-07.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">វណ្ណៈ ដារា</h6>
+                                                <small class="text-muted">ពិនិត្យភ្នែក - ឧសភា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            គ្រូពេទ្យពន្យល់ច្បាស់លាស់ និងមានការណែនាំយ៉ាងល្អ។ ខ្ញុំមានទំនុកចិត្តខ្ពស់។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 5 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/tm-08.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">ឈិន ណារិទ្ធ</h6>
+                                                <small class="text-muted">ពិនិត្យសម្ពាធឈាម - មិថុនា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            សេវាកម្មរហ័ស និងមានការថែទាំប្រកបដោយស្មោះត្រង់។ សូមអរគុណគ្លីនិក។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 6 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/tw-09.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">ស្រី សុផានិត</h6>
+                                                <small class="text-muted">សម្ភព - កក្កដា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            ពេលសម្រាលបានទទួលការថែទាំយ៉ាងពិសេស ពេទ្យទំនេរប្រកបដោយជំនាញខ្ពស់។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 7 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/tw-12.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">វណ្ណ ថារី</h6>
+                                                <small class="text-muted">ពិនិត្យស្បែក - មិថុនា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            អ្នកជំនាញផ្នែកស្បែកបានផ្តល់ដំបូន្មានល្អ បញ្ហារបស់ខ្ញុំបានដោះស្រាយ។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 8 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/tw-16.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">ទុំ ស្រីពៅ</h6>
+                                                <small class="text-muted">ពិនិត្យទូទៅ - មេសា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            ទទួលបានសេវាកម្មយ៉ាងឆាប់រហ័ស និងការព្យាបាលសមស្រប។ ខ្ញុំពិតជាមានការពេញចិត្ត។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 9 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/tm-10.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">លឹម ប្រុសពៅ</h6>
+                                                <small class="text-muted">ពិនិត្យឆ្អឹង - កក្កដា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            សេវាកម្មគាំទ្រយ៉ាងល្អ បន្ទប់ព្យាបាលស្អាតនិងស្រស់ស្អាត។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star-half-stroke"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 10 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card shadow-sm p-4 rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="../assets/img/testimonial/tm-13.jpeg"
+                                                class="rounded-circle me-3 border" width="60" height="60" alt="Patient">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">លី សំណាង</h6>
+                                                <small class="text-muted">ពិនិត្យក្មេង - ឧសភា 2025</small>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted mb-3">
+                                            កូនរបស់ខ្ញុំបានទទួលការព្យាបាលយ៉ាងអនុគ្រោះ ពេទ្យទំនេរយកចិត្តទុកដាក់។
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-warning">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <i class="fa-solid fa-quote-right fa-2x text-primary opacity-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- Pagination + Navigation -->
+                            <div class="swiper-pagination mt-4"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="our-doctor">
+            <div class="container">
+                <p class="small-text mb-0 text-center">ជួបជាមួយ</p>
+                <h3 class="title text-center mb-4">វេជ្ជបណ្ឌិតជំនាញ</h3>
+                <div class="row">
+
+                    <!-- Doctor 1 -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                        <div class="doctor-card" data-aos="fade-up" data-aos-duration="1800">
+                            <div class="doctor-image">
+                                <img src="../assets/img/doctor/doctor_1 copy.png" alt="">
+                            </div>
+                            <div class="doctor-body">
+                                <h4 class="doctor-name mt-5">វេជ្ជបណ្ឌិត James Lee, MD</h4>
+                                <p class="mb-2 subtitle">ប្រធានគ្រូពេទ្យបេះដូង</p>
+                                <p>ជាមួយនឹងជំនាញក្នុងការគ្រប់គ្រងស្ថានភាពបេះដូងស្មុគស្មាញ
+                                    និងអនុវត្តនីតិវិធីបេះដូងកម្រិតខ្ពស់</p>
+                            </div>
+                            <div class="doctor-social-media">
+                                <a href="https://facebook.com" target="_blank" class="social-media-item"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://m.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-messenger"></i></a>
+                                <a href="https://t.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                        <div class="doctor-card" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="doctor-image">
+                                <img src="../assets/img/doctor/doctor_1 (1).png" alt="">
+                            </div>
+                            <div class="doctor-body">
+                                <h4 class="doctor-name mt-5">វេជ្ជបណ្ឌិត Sophia Chan, MD</h4>
+                                <p class="mb-2 subtitle">អ្នកជំនាញខាងភ្នែក</p>
+                                <p>មានបទពិសោធន៍ជាច្រើនឆ្នាំក្នុងការព្យាបាលជំងឺភ្នែក និងវះកាត់តូចៗសម្រាប់ការព្យាបាលទំនើប
+                                </p>
+                            </div>
+                            <div class="doctor-social-media">
+                                <a href="https://facebook.com" target="_blank" class="social-media-item"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://m.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-messenger"></i></a>
+                                <a href="https://t.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                        <div class="doctor-card" data-aos="fade-up" data-aos-duration="2200">
+                            <div class="doctor-image">
+                                <img src="../assets/img/doctor/doctor_2.png" alt="">
+                            </div>
+                            <div class="doctor-body">
+                                <h4 class="doctor-name mt-5">វេជ្ជបណ្ឌិត Michael Tan, MD</h4>
+                                <p class="mb-2 subtitle">អ្នកជំនាញខាងជំងឺឆ្អឹង</p>
+                                <p>ជំនាញក្នុងការព្យាបាលបញ្ហាឆ្អឹង សន្លាក់ និងការធ្វើការវះកាត់ដើម្បីស្តារឡើងវិញដោយជំនាញ
+                                </p>
+                            </div>
+                            <div class="doctor-social-media">
+                                <a href="https://facebook.com" target="_blank" class="social-media-item"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://m.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-messenger"></i></a>
+                                <a href="https://t.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 4 -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                        <div class="doctor-card" data-aos="fade-up" data-aos-duration="2400">
+                            <div class="doctor-image">
+                                <img src="../assets/img/doctor/doctor_3 (1).png" alt="">
+                            </div>
+                            <div class="doctor-body">
+                                <h4 class="doctor-name mt-5">វេជ្ជបណ្ឌិត Anna Wong, MD</h4>
+                                <p class="mb-2 subtitle">អ្នកជំនាញស្ត្រីមានផ្ទៃពោះ</p>
+                                <p>ឯកទេសក្នុងការផ្តល់សេវាព្យាបាល និងប្រឹក្សាសុខភាពស្ត្រី ការពិនិត្យមុនសម្រាល
+                                    និងក្រោយសម្រាល</p>
+                            </div>
+                            <div class="doctor-social-media">
+                                <a href="https://facebook.com" target="_blank" class="social-media-item"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://m.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-messenger"></i></a>
+                                <a href="https://t.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 5 -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                        <div class="doctor-card" data-aos="fade-up" data-aos-duration="2600">
+                            <div class="doctor-image">
+                                <img src="../assets/img/doctor/doctor_7.png" alt="">
+                            </div>
+                            <div class="doctor-body">
+                                <h4 class="doctor-name mt-5">វេជ្ជបណ្ឌិត David Kim, MD</h4>
+                                <p class="mb-2 subtitle">អ្នកជំនាញសុខភាពកុមារ</p>
+                                <p>មានបទពិសោធន៍ក្នុងការព្យាបាលកុមារទាំងពេញមួយវ័យ និងផ្តល់សេវាថែទាំទំនើបសម្រាប់កុមារ</p>
+                            </div>
+                            <div class="doctor-social-media">
+                                <a href="https://facebook.com" target="_blank" class="social-media-item"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://m.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-messenger"></i></a>
+                                <a href="https://t.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 6 -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                        <div class="doctor-card" data-aos="fade-up" data-aos-duration="2800">
+                            <div class="doctor-image">
+                                <img src="../assets/img/doctor/doctor_4.png" alt="">
+                            </div>
+                            <div class="doctor-body">
+                                <h4 class="doctor-name mt-5">វេជ្ជបណ្ឌិត Lisa Chen, MD</h4>
+                                <p class="mb-2 subtitle">អ្នកជំនាញសុខភាពស្បែក</p>
+                                <p>ផ្តល់សេវាព្យាបាលជំងឺស្បែក ការកែសម្ផស្ស
+                                    និងការព្យាបាលដោយបច្ចេកវិទ្យាសម័យថ្មីនាពេលបច្ចុប្បន្ន</p>
+                            </div>
+                            <div class="doctor-social-media">
+                                <a href="https://facebook.com" target="_blank" class="social-media-item"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://m.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-messenger"></i></a>
+                                <a href="https://t.me/username" target="_blank" class="social-media-item"><i
+                                        class="bi bi-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="facilities-section">
+            <!-- Facilities Section -->
+            <div class="container py-5">
+                <div class="section-header">
+                    <h6 class="subtitle">HAVE A LOOK AT</h6>
+                    <h2 class="title">គ្រឿងបរិក្ខារ និងសកម្មភាពរបស់យើង</h2>
+                </div>
+
+                <div class="row g-4 facility-grid">
+                    <!-- First row of images -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="img-container">
+                            <img src="../assets/img/about-us/portfolio_1_lg.jpeg" alt="Doctor with Patient"
+                                class="facility-img">
+
+                            <div class="img-overlay2">
+                                <div class="img-overlay">
+                                    <div class="img-overlay-content">
+                                        <div class="hover-icon-container">
+                                            <i class="fa-solid fa-arrows-up-down-left-right hover-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="img-container">
+                            <img src="../assets/img/about-us/portfolio_2_lg.jpeg" alt="Clean Hospital Room"
+                                class="facility-img">
+                            <div class="img-overlay2">
+                                <div class="img-overlay">
+                                    <div class="img-overlay-content">
+                                        <div class="hover-icon-container">
+                                            <i class="fa-solid fa-arrows-up-down-left-right hover-icon"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="img-container">
+                            <img src="../assets/img/about-us/portfolio_3_lg.jpeg" alt="Operating Light"
+                                class="facility-img">
+                            <div class="img-overlay2">
+                                <div class="img-overlay">
+                                    <div class="img-overlay-content">
+                                        <div class="hover-icon-container">
+                                            <i class="fa-solid fa-arrows-up-down-left-right hover-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Second row of images -->
+                    <div class="col-12 col-md-6 col-lg-8">
+                        <div class="img-container">
+                            <img src="../assets/img/about-us/portfolio_4_lg.jpeg" alt="MRI Machine"
+                                class="facility-img">
+                            <div class="img-overlay2">
+                                <div class="img-overlay">
+                                    <div class="img-overlay-content">
+                                        <div class="hover-icon-container">
+                                            <i class="fa-solid fa-arrows-up-down-left-right hover-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="img-container">
+                            <img src="../assets/img/about-us/portfolio_5_lg.jpeg" alt="Senior Patient Checkup"
+                                class="facility-img">
+                            <div class="img-overlay2">
+                                <div class="img-overlay">
+                                    <div class="img-overlay-content">
+                                        <div class="hover-icon-container">
+                                            <i class="fa-solid fa-arrows-up-down-left-right hover-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="awards-section">
+            <!-- Awards Section -->
+            <div class="container py-5 my-5">
+                <div class="section-header">
+                    <h6 class="subtitle">AWARDS</h6>
+                    <h2 class="title">ការឈ្នះរង្វាន់ និងការទទួលស្គាល់</h2>
+                    <p class="awards-subtitle mt-3">
+                        យើងត្រូវបានគេទទួលស្គាល់ចំពោះការប្តេជ្ញាចិត្តរបស់យើងចំពោះឧត្តមភាពក្នុងការថែទាំសុខភាព</p>
+                </div>
+
+
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Award Card 1 -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="award-card gap-3">
+                            <div class="award-icon-container">
+                                <img src="../assets/img/icons/award (1).png" alt="" class="award-icon w-75">
+                            </div>
+                            <p class="award-text mb-0">ពានរង្វាន់គុណភាពជាតិ Malcolm Baldrige</p>
+                        </div>
+                    </div>
+                    <!-- Award Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="award-card gap-3">
+                            <div class="award-icon-container">
+                                <img src="../assets/img/icons/award (1).png" alt="" class="award-icon w-75">
+                            </div>
+                            <p class="award-text mb-0">ពានរង្វាន់ HIMSS Davies</p>
+                        </div>
+                    </div>
+                    <!-- Award Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="award-card gap-3">
+                            <div class="award-icon-container">
+                                <img src="../assets/img/icons/award (1).png" alt="" class="award-icon w-75">
+                            </div>
+                            <p class="award-text mb-0">Healthgrades មន្ទីរពេទ្យល្អបំផុតរបស់ជាតិ</p>
+                        </div>
+
+                    </div>
+                    <!-- Award Card 4 -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="award-card gap-3">
+                            <div class="award-icon-container">
+                                <img src="../assets/img/icons/award (1).png" alt="" class="award-icon w-75">
+                            </div>
+                            <p class="award-text mb-0">មន្ទីរពេទ្យល្អបំផុតថ្នាក់ជាតិ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Greeting / Statement Section -->
+        <section class="statement py-5">
+            <div class="container mb-5">
+                <div class="row g-4 justify-content-center text-center statement-bg">
+
+                    <!-- Title -->
+                    <div class="col-12">
+                        <h2 class="mt-3 mb-2 koulen-name">សេចក្តីថ្លែងអំណរគុណ</h2>
+                        <span class="hanuman d-block mb-3">សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅជូនចំពោះ</span>
+                        <p class="hanuman">
+                            ក្រសួង​ប្រៃសណីយ៍និងទូរគមនាគមន៍ មូលនិធិ ស.អ. និងថ្នាក់បណ្តុះបណ្តាលបច្ចេកវិទ្យាអាន​ ANT <br>
+                            ក្រុមរបស់ពួកយើងមានអារម្មណ៍សោមនស្សរីករាយដែលទទួលបាន​នូវ​
+                            អាហារូបករណ៍លើជំនាញការអភិវឌ្ឍន៍គេហទំព័រ <br>
+                            អាហារូបករណ៍​នេះពិតជាបានជួយសម្រាលបន្ទុកហិរញ្ញវត្តុនៃការចាយការសិក្សាដល់ក្រុមរបស់ពួកយើងទាំងអស់គ្នា​
+                            <br>
+                            ក្រុមរបស់ពួកយើងនិងប្តេជ្ញាការខិតខំប្រឹងប្រែងសិក្សា​​​​
+                            គឺដើម្បីកសាងសមត្តភាពក៏អាចចូលរួចចំណែកសង្គមនាពេលថ្ងៃអនាគត ។
+                        </p>
+                    </div>
+
+                    <!-- Logos -->
+                    <div class="col-xl-4 col-md-6 col-sm-12 my-5">
+                        <div class="card-logo border-0 bg-transparent">
+                            <div class="statement-img m-auto">
+                                <img src="../assets/img/logo-from-ant/MPTC.png" alt="MPTC Logo" class="img-fluid"
+                                    style="max-height:130px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12">
+                        <div class="card-logo border-0 bg-transparent">
+                            <div class="statement-img m-auto">
+                                <img src="../assets/img/logo-from-ant/CBRD Fund.png" alt="CBRD Fund Logo"
+                                    class="img-fluid" style="max-height:130px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12">
+                        <div class="card-logo border-0 bg-transparent">
+                            <div class="statement-img m-auto">
+                                <img src="../assets/img/logo-from-ant/ANT.png" alt="ANT Logo" class="img-fluid"
+                                    style="max-height:130px;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====================Footer=============================== -->
+    <footer class="footer pt-3 text-white">
+
+        <!-- Links Section -->
+        <section class="link-footer">
+            <div class="container py-5">
+                <!-- Brand -->
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                    </div>
+                </div>
+
+                <div class="row no-wrap">
+                    <!-- Social -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="fw-bold mb-3">រក្សាទំនាក់ទំនង</h5>
+                        <p class="text-white-50">
+                            តាមដានពួកយើងសម្រាប់ព័ត៌មានសុខភាពប្រចាំថ្ងៃតាមរយៈ Social Media
+                        </p>
+                        <div class="d-flex gap-2 mb-3">
+                            <a href="#" class="social-btn bg-fb text-white"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-btn bg-danger text-white"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-btn bg-linkin text-white"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-btn bg-ig text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <small class="text-white-50"><i class="fas fa-users me-1"></i>អ្នកគាំទ្រ 50K+</small>
+                    </div>
+
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="fw-bold mb-3">តំណភ្ជាប់រហ័ស</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="f-link"><i class="fas fa-angle-right me-2"></i>អំពីយើង</a>
+                            </li>
+                            <li>
+                                <a href="department_page.html" class="f-link"><i
+                                        class="fas fa-angle-right me-2"></i>ផ្នែកឯកទេស</a>
+                            </li>
+                            <li>
+                                <a href="doctor.html" class="f-link"><i
+                                        class="fas fa-angle-right me-2"></i>ជួបគ្រូពេទ្យ</a>
+                            </li>
+                            <li>
+                                <a href="timetable.html" class="f-link"><i
+                                        class="fas fa-angle-right me-2"></i>កាលវិភាគ</a>
+                            </li>
+                            <li>
+                                <a href="appointment.html" class="f-link"><i
+                                        class="fas fa-angle-right me-2"></i>ការណាត់ជួប</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="fw-bold mb-3">សេវាសុខភាព</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="department-detail.html" class="f-link"><i
+                                        class="fas fa-heartbeat me-2"></i>វេជ្ជសាស្ត្រទូទៅ</a>
+                            </li>
+                            <li>
+                                <a href="department-detail.html" class="f-link"><i
+                                        class="fas fa-child me-2"></i>ការថែទាំកុមារ</a>
+                            </li>
+                            <li>
+                                <a href="department-detail.html" class="f-link"><i
+                                        class="fas fa-heart me-2"></i>រោគបេះដូង</a>
+                            </li>
+                            <li>
+                                <a href="department-detail.html" class="f-link"><i
+                                        class="fas fa-tooth me-2"></i>ទន្តសាស្ត្រ</a>
+                            </li>
+                            <li>
+                                <a href="department-detail.html" class="f-link"><i
+                                        class="fas fa-eye me-2"></i>ចក្ខុវិស័យ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="fw-bold mb-3">ព័ត៍មានទំនាក់ទំនង</h5>
+                        <p class="text-white-50 mb-1">
+                            <i class="fas fa-map-marker-alt me-2"></i>123 Wellness Avenue,
+                            ភ្នំពេញ
+                        </p>
+                        <p class="mb-1">
+                            <a href="tel:123-436-7890" class="f-link"><i class="fas fa-phone me-2"></i>+1 (123)
+                                436-7890</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="mailto:hello@prohealth.com" class="f-link"><i
+                                    class="fas fa-envelope me-2"></i>Welcometo@DigitalClinic.com</a>
+                        </p>
+                        <p class="text-white-50">
+                            <i class="fas fa-clock me-2"></i>24/7 ការថែទាំសង្គ្រោះបន្ទាន់
+                        </p>
+                    </div>
+
+
+                    <hr class="my-4" style="border:1px,solid, rgb(35, 88, 180)" />
+                    <div class="row">
+                        <div class="col text-center">
+                            <p class="text-white-50 mb-0">
+                                &copy; 2025 គ្លីនិកឌីជីថល | រក្សាសិទ្ធិដោយ G-15 |
+                                <a href="#" class="text-decoration-none text-info">លក្ខខណ្ឌនៃសេវាកម្ម</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <!-- swipper -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            if (window.scrollY > 50) {
+                header.classList.add("bg-dark-blue", "text-white", "shadow-sm");
+            } else {
+                header.classList.remove("bg-dark-blue", "text-white", "shadow-sm");
+            }
+        });
+
+        // AOS
+        AOS.init();
+
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
